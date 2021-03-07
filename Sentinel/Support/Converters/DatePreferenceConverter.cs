@@ -8,8 +8,6 @@ namespace Sentinel.Support.Converters
 
     using log4net;
 
-    using NodaTime;
-
     using Sentinel.Interfaces;
     using Sentinel.Interfaces.CodeContracts;
 
@@ -47,19 +45,8 @@ namespace Sentinel.Support.Converters
             // TODO: safely handle the meta-data dateTime not being a date-time!
             var dt = (DateTime?)displayDateTime ?? message.DateTime;
 
-            // TODO: make a time selection option....
-            if (dt.Kind == DateTimeKind.Utc && Preferences.ConvertUtcTimesToLocalTimeZone)
-            {
-                var defaultTimeZone = DateTimeZoneProviders.Tzdb.GetSystemDefault();
-                var global = new ZonedDateTime(Instant.FromDateTimeUtc(dt), defaultTimeZone);
-                return
-                    global.ToString(
-                        GetDateDisplayFormat(Preferences.SelectedDateOption, Preferences.DateFormatOptions),
-                        CultureInfo.CurrentCulture);
-            }
-
-            var local = LocalDateTime.FromDateTime(dt);
-            return local.ToString(
+            
+            return dt.ToString(
                 GetDateDisplayFormat(Preferences.SelectedDateOption, Preferences.DateFormatOptions),
                 CultureInfo.CurrentCulture);
         }

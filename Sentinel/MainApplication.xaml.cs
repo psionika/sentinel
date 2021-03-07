@@ -12,6 +12,17 @@
     public partial class MainApplication : Application
     {
         /// <summary>
+        /// Application Entry Point.
+        /// </summary>
+        [System.STAThreadAttribute()]
+        public static void Main()
+        {
+            Sentinel.MainApplication app = new Sentinel.MainApplication();
+            app.InitializeComponent();
+            app.Run();
+        }
+
+        /// <summary>
         /// Initializes a new instance of the <see cref="MainApplication"/> class.
         /// </summary>
         public MainApplication()

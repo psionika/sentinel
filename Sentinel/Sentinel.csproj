@@ -1,24 +1,513 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
-
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6BBB237B-0490-4462-98D4-095AB6381DB3}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net5.0-windows</TargetFramework>
-    <UseWPF>true</UseWPF>
+    <RootNamespace>Sentinel</RootNamespace>
     <AssemblyName>Sentinel</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
   </PropertyGroup>
-
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
   <ItemGroup>
-    <Page Remove="MainApplication.xaml" />
-    <ApplicationDefinition Include="MainApplication.xaml" />
+    <Reference Include="CommandLine, Version=2.8.0.0, Culture=neutral, PublicKeyToken=5a870481e358d379, processorArchitecture=MSIL">
+      <HintPath>..\packages\CommandLineParser.2.8.0\lib\net45\CommandLine.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.12.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.12\lib\net45\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Controls.Ribbon" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
   </ItemGroup>
-
   <ItemGroup>
-    <PackageReference Include="CommandLineParser" Version="2.8.0" />
-    <PackageReference Include="log4net" Version="2.0.12" />
-    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
-    <PackageReference Include="NodaTime" Version="3.0.4" />
+    <Compile Include="Classification\Classifier.cs" />
+    <Compile Include="Classification\ClassifyingService.cs" />
+    <Compile Include="Classification\Gui\AddClassifier.cs" />
+    <Compile Include="Classification\Gui\AddEditClassifier.cs" />
+    <Compile Include="Classification\Gui\AddEditClassifierWindow.xaml.cs">
+      <DependentUpon>AddEditClassifierWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Classification\Gui\ClassificationsControl.xaml.cs">
+      <DependentUpon>ClassificationsControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Classification\Gui\EditClassifier.cs" />
+    <Compile Include="Classification\Gui\RemoveClassifier.cs" />
+    <Compile Include="Classification\Interfaces\IAddClassifyingService.cs" />
+    <Compile Include="Classification\Interfaces\IClassifier.cs" />
+    <Compile Include="Classification\Interfaces\IClassifyingService.cs" />
+    <Compile Include="Classification\Interfaces\IEditClassifyingService.cs" />
+    <Compile Include="Classification\Interfaces\IRemoveClassifyingService.cs" />
+    <Compile Include="Controls\AboutWindow.xaml.cs">
+      <DependentUpon>AboutWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ImageTypesControl.xaml.cs">
+      <DependentUpon>ImageTypesControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\IntegerTextBox.cs" />
+    <Compile Include="Controls\LogActivityControl.xaml.cs">
+      <DependentUpon>LogActivityControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PersistingSettings.cs" />
+    <Compile Include="Controls\PreferencesControl.xaml.cs">
+      <DependentUpon>PreferencesControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PreferencesWindow.xaml.cs">
+      <DependentUpon>PreferencesWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\RecentFileInfo.cs" />
+    <Compile Include="Controls\WindowPlacementInfo.cs" />
+    <Compile Include="EventLogMonitor\CommandLineOptions.cs" />
+    <Compile Include="EventLogMonitor\EventLogEntry.cs" />
+    <Compile Include="EventLogMonitor\Interfaces\IEventLogEntry.cs" />
+    <Compile Include="Extractors\ExtractingService.cs" />
+    <Compile Include="Extractors\Extractor.cs" />
+    <Compile Include="Extractors\Gui\AddEditExtractor.cs" />
+    <Compile Include="Extractors\Gui\AddEditExtractorWindow.xaml.cs">
+      <DependentUpon>AddEditExtractorWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Extractors\Gui\AddExtractor.cs" />
+    <Compile Include="Extractors\Gui\EditExtractor.cs" />
+    <Compile Include="Extractors\Gui\ExtractorsControl.xaml.cs">
+      <DependentUpon>ExtractorsControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Extractors\Gui\RemoveExtractor.cs" />
+    <Compile Include="Extractors\Interfaces\IAddExtractorService.cs" />
+    <Compile Include="Extractors\Interfaces\IEditExtractorService.cs" />
+    <Compile Include="Extractors\Interfaces\IExtractingService.cs" />
+    <Compile Include="Extractors\Interfaces\IExtractor.cs" />
+    <Compile Include="Extractors\Interfaces\IRemoveExtractorService.cs" />
+    <Compile Include="Extractors\Interfaces\ISearchExtractor.cs" />
+    <Compile Include="Extractors\SearchExtractor.cs" />
+    <Compile Include="FileMonitor\CustomMessageDecoderPage.xaml.cs">
+      <DependentUpon>CustomMessageDecoderPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FileMonitor\FileMonitoringProvider.cs" />
+    <Compile Include="FileMonitor\FileMonitoringProviderSettings.cs" />
+    <Compile Include="FileMonitor\FileMonitorProviderPage.xaml.cs">
+      <DependentUpon>FileMonitorProviderPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FileMonitor\IFileMonitoringProviderSettings.cs" />
+    <Compile Include="FileMonitor\LogEntry.cs" />
+    <Compile Include="FileMonitor\MessageFormatPage.xaml.cs">
+      <DependentUpon>MessageFormatPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FileMonitor\ProviderRegistrationInformation.cs" />
+    <Compile Include="Filters\Filter.cs" />
+    <Compile Include="Filters\FilteringService.cs" />
+    <Compile Include="Filters\Gui\AddEditFilter.cs" />
+    <Compile Include="Filters\Gui\AddEditFilterWindow.xaml.cs">
+      <DependentUpon>AddEditFilterWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Filters\Gui\AddFilter.cs" />
+    <Compile Include="Filters\Gui\EditFilter.cs" />
+    <Compile Include="Filters\Gui\FiltersControl.xaml.cs">
+      <DependentUpon>FiltersControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Filters\Gui\RemoveFilter.cs" />
+    <Compile Include="Filters\Interfaces\IAddFilterService.cs" />
+    <Compile Include="Filters\Interfaces\IEditFilterService.cs" />
+    <Compile Include="Filters\Interfaces\IFilter.cs" />
+    <Compile Include="Filters\Interfaces\IFilteringService.cs" />
+    <Compile Include="Filters\Interfaces\IRemoveFilterService.cs" />
+    <Compile Include="Filters\Interfaces\ISearchFilter.cs" />
+    <Compile Include="Filters\Interfaces\IStandardDebuggingFilter.cs" />
+    <Compile Include="Filters\SearchFilter.cs" />
+    <Compile Include="Filters\StandardFilter.cs" />
+    <Compile Include="Highlighters\Gui\AddEditHighlighter.cs" />
+    <Compile Include="Highlighters\Gui\AddEditHighlighterWindow.xaml.cs">
+      <DependentUpon>AddEditHighlighterWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Highlighters\Gui\AddNewHighlighterService.cs" />
+    <Compile Include="Highlighters\Gui\EditHighlighterService.cs" />
+    <Compile Include="Highlighters\Gui\HighlightersControl.xaml.cs">
+      <DependentUpon>HighlightersControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Highlighters\Gui\RemoveHighlighterService.cs" />
+    <Compile Include="Highlighters\Highlighter.cs" />
+    <Compile Include="Highlighters\HighlighterConverter.cs" />
+    <Compile Include="Highlighters\HighlighterStyle.cs" />
+    <Compile Include="Highlighters\HighlightingSelector.cs" />
+    <Compile Include="Highlighters\HighlightingService.cs" />
+    <Compile Include="Highlighters\Interfaces\IAddHighlighterService.cs" />
+    <Compile Include="Highlighters\Interfaces\IEditHighlighterService.cs" />
+    <Compile Include="Highlighters\Interfaces\IHighlighter.cs" />
+    <Compile Include="Highlighters\Interfaces\IHighlightingService.cs" />
+    <Compile Include="Highlighters\Interfaces\IRemoveHighlighterService.cs" />
+    <Compile Include="Highlighters\Interfaces\ISearchHighlighter.cs" />
+    <Compile Include="Highlighters\Interfaces\IStandardDebuggingHighlighter.cs" />
+    <Compile Include="Highlighters\SearchHighlighter.cs" />
+    <Compile Include="Highlighters\StandardHighlighter.cs" />
+    <Compile Include="Images\AddEditTypeImageViewModel.cs" />
+    <Compile Include="Images\AddTypeImageService.cs" />
+    <Compile Include="Images\Controls\AddImageWindow.xaml.cs">
+      <DependentUpon>AddImageWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Images\EditTypeImageMapping.cs" />
+    <Compile Include="Images\ImageQuality.cs" />
+    <Compile Include="Images\ImageTypeRecord.cs" />
+    <Compile Include="Images\Interfaces\IAddTypeImage.cs" />
+    <Compile Include="Images\Interfaces\IEditTypeImage.cs" />
+    <Compile Include="Images\Interfaces\ImageOptions.cs" />
+    <Compile Include="Images\Interfaces\IRemoveTypeImage.cs" />
+    <Compile Include="Images\Interfaces\ITypeImageService.cs" />
+    <Compile Include="Images\RemoveTypeImageMapping.cs" />
+    <Compile Include="Images\TypeToImageService.cs" />
+    <Compile Include="Interfaces\CaseInsensitiveComparer.cs" />
+    <Compile Include="Interfaces\CodeContracts\ThrowIfNull.cs" />
+    <Compile Include="Interfaces\CodeContracts\ThrowIfNullOrWhitespace.cs" />
+    <Compile Include="Interfaces\CodeContracts\ValidatedNotNullAttribute.cs" />
+    <Compile Include="Interfaces\CollectionChangeHelper.cs" />
+    <Compile Include="Interfaces\EnumerableExtensions.cs" />
+    <Compile Include="Interfaces\IDefaultInitialisation.cs" />
+    <Compile Include="Interfaces\IHighlighterStyle.cs" />
+    <Compile Include="Interfaces\ILogEntry.cs" />
+    <Compile Include="Interfaces\ILogger.cs" />
+    <Compile Include="Interfaces\IUserPreferences.cs" />
+    <Compile Include="Interfaces\LinqHelpers.cs" />
+    <Compile Include="Interfaces\LogEntryFields.cs" />
+    <Compile Include="Interfaces\MatchMode.cs" />
+    <Compile Include="Interfaces\Providers\ILogProvider.cs" />
+    <Compile Include="Interfaces\Providers\INetworkProvider.cs" />
+    <Compile Include="Interfaces\Providers\IProviderInfo.cs" />
+    <Compile Include="Interfaces\Providers\IProviderRegistrationRecord.cs" />
+    <Compile Include="Interfaces\Providers\IProviderSettings.cs" />
+    <Compile Include="Log4Net\ConfigurationPage.xaml.cs">
+      <DependentUpon>ConfigurationPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Log4Net\IUdpAppenderListenerSettings.cs" />
+    <Compile Include="Log4Net\Log4NetProvider.cs" />
+    <Compile Include="Log4Net\LogEntry.cs" />
+    <Compile Include="Log4Net\ProviderRegistrationInformation.cs" />
+    <Compile Include="Log4Net\UdpAppenderSettings.cs" />
+    <Compile Include="Log4Net\XElementHelpers.cs" />
+    <Compile Include="Logger\ILogViewerDetails.cs" />
+    <Compile Include="Logger\IUdpLogViewer.cs" />
+    <Compile Include="Logger\LogWriter.cs" />
+    <Compile Include="Logs\Gui\AddNewLoggerWelcomePage.xaml.cs">
+      <DependentUpon>AddNewLoggerWelcomePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Logs\Gui\NewLoggerSettings.cs" />
+    <Compile Include="Logs\Gui\NewLoggerSummaryPage.xaml.cs">
+      <DependentUpon>NewLoggerSummaryPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Logs\Gui\NewLoggerWizard.cs" />
+    <Compile Include="Logs\Gui\ProvidersPage.xaml.cs">
+      <DependentUpon>ProvidersPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Logs\Gui\SetLoggerNamePage.xaml.cs">
+      <DependentUpon>SetLoggerNamePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Logs\Gui\ViewSelectionPage.xaml.cs">
+      <DependentUpon>ViewSelectionPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Logs\Interfaces\ILogFileExporter.cs" />
+    <Compile Include="Logs\Interfaces\ILogManager.cs" />
+    <Compile Include="Logs\Log.cs" />
+    <Compile Include="Logs\LogFileExporter.cs" />
+    <Compile Include="Logs\LogManager.cs" />
+    <Compile Include="MainApplication.xaml.cs" />
+    <Compile Include="MSBuild\ConfigurationPage.xaml.cs">
+      <DependentUpon>ConfigurationPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MSBuild\IMSBuildListenerSettings.cs" />
+    <Compile Include="MSBuild\LogEntry.cs" />
+    <Compile Include="MSBuild\MSBuildListenerSettings.cs" />
+    <Compile Include="MSBuild\MSBuildProvider.cs" />
+    <Compile Include="MSBuild\ProviderInfo.cs" />
+    <Compile Include="MSBuild\ProviderRegistrationInformation.cs" />
+    <Compile Include="NLog\INLogAppenderSettings.cs" />
+    <Compile Include="NLog\LogEntry.cs" />
+    <Compile Include="NLog\NetworkClientWrapper.cs" />
+    <Compile Include="NLog\NetworkConfigurationPage.xaml.cs">
+      <DependentUpon>NetworkConfigurationPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="NLog\NetworkProtocol.cs" />
+    <Compile Include="NLog\NetworkSettings.cs" />
+    <Compile Include="NLog\NLogViewerProvider.cs" />
+    <Compile Include="NLog\ProviderInfo.cs" />
+    <Compile Include="NLog\ProviderRegistrationInformation.cs" />
+    <Compile Include="NLog\ProviderSettings.cs" />
+    <Compile Include="Preferences\UserPreferences.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Providers\Interfaces\INewProviderWizard.cs" />
+    <Compile Include="Providers\Interfaces\IProviderManager.cs" />
+    <Compile Include="Providers\Interfaces\PendingProviderRecord.cs" />
+    <Compile Include="Providers\NewProviderWizard.cs" />
+    <Compile Include="Providers\ProviderInfo.cs" />
+    <Compile Include="Providers\ProviderManager.cs" />
+    <Compile Include="Providers\ProviderRegistrationRecord.cs" />
+    <Compile Include="Providers\ProviderSettings.cs" />
+    <Compile Include="Providers\SelectProviderPage.xaml.cs">
+      <DependentUpon>SelectProviderPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Services\AttributeHelper.cs" />
+    <Compile Include="Services\DictionaryHelper.cs" />
+    <Compile Include="Services\Interfaces\ISessionManager.cs" />
+    <Compile Include="Services\ServiceLocator.cs" />
+    <Compile Include="Services\SessionManager.cs" />
+    <Compile Include="StartUp\IOptions.cs" />
+    <Compile Include="StartUp\Log4NetOptions.cs" />
+    <Compile Include="StartUp\NLogOptions.cs" />
+    <Compile Include="Support\Converters\BooleanToWidthConverter.cs" />
+    <Compile Include="Support\Converters\CollapseIfNullConverter.cs" />
+    <Compile Include="Support\Converters\DatePreferenceConverter.cs" />
+    <Compile Include="Support\Converters\ImageLibraryConverter.cs" />
+    <Compile Include="Support\Converters\LongPathToShortPathConverter.cs" />
+    <Compile Include="Support\Converters\MessageHasExceptionMetadataConverter.cs" />
+    <Compile Include="Support\Converters\MetaDataConverter.cs" />
+    <Compile Include="Support\Converters\MetaDataParameterConverter.cs" />
+    <Compile Include="Support\Converters\TimePreferenceConverter.cs" />
+    <Compile Include="Support\Converters\TimeSinceDateTimeConverter.cs" />
+    <Compile Include="Support\Converters\TypeToImageConverter.cs" />
+    <Compile Include="Support\Converters\TypeToLargeImageConverter.cs" />
+    <Compile Include="Support\Converters\TypeToMediumImageConverter.cs" />
+    <Compile Include="Support\Converters\TypeToSmallImageConverter.cs" />
+    <Compile Include="Support\GridViewSort.cs" />
+    <Compile Include="Support\JsonHelper.cs" />
+    <Compile Include="Support\ScrollingHelper.cs" />
+    <Compile Include="Support\Wpf\DataBoundToolbar.cs" />
+    <Compile Include="Support\Wpf\FixedWidthColumn.cs" />
+    <Compile Include="Support\Wpf\ObservableDictionary.cs" />
+    <Compile Include="Support\Wpf\ThemeInfo.cs" />
+    <Compile Include="Views\Gui\LogMessages.cs" />
+    <Compile Include="Views\Gui\LogMessagesControl.xaml.cs">
+      <DependentUpon>LogMessagesControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Gui\LogViewerToolbarButton.cs" />
+    <Compile Include="Views\Gui\MultipleViewFrame.xaml.cs">
+      <DependentUpon>MultipleViewFrame.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Gui\ViewInformation.cs" />
+    <Compile Include="Views\Heartbeat\HeartbeatControl.xaml.cs">
+      <DependentUpon>HeartbeatControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Heartbeat\MessageHeatbeat.cs" />
+    <Compile Include="Views\Heartbeat\ViewInformation.cs" />
+    <Compile Include="Views\Interfaces\ILogViewer.cs" />
+    <Compile Include="Views\Interfaces\ILogViewerToolbarButton.cs" />
+    <Compile Include="Views\Interfaces\IViewInformation.cs" />
+    <Compile Include="Views\Interfaces\IViewManager.cs" />
+    <Compile Include="Views\Interfaces\IWindowFrame.cs" />
+    <Compile Include="Views\ViewManager.cs" />
+    <Compile Include="WpfExtras\Converters\BooleanInvertingValueConverter.cs" />
+    <Compile Include="WpfExtras\Converters\BooleanToDisabledConverter.cs" />
+    <Compile Include="WpfExtras\Converters\CollapseIfFalseConverter.cs" />
+    <Compile Include="WpfExtras\Converters\CollapseIfZeroConverter.cs" />
+    <Compile Include="WpfExtras\Converters\ColourConverter.cs" />
+    <Compile Include="WpfExtras\Converters\VisibilityToCollapsedConverter.cs" />
+    <Compile Include="WpfExtras\Converters\VisibilityToHiddenConverter.cs" />
+    <Compile Include="WpfExtras\DelegateCommand.cs" />
+    <Compile Include="WpfExtras\EstablishPossibleNavigation.cs" />
+    <Compile Include="WpfExtras\IWizardPage.cs" />
+    <Compile Include="WpfExtras\PageChange.cs" />
+    <Compile Include="WpfExtras\PageNavigationTreeEntry.cs" />
+    <Compile Include="WpfExtras\ViewModelBase.cs" />
+    <Compile Include="WpfExtras\Wizard.xaml.cs">
+      <DependentUpon>Wizard.xaml</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
   </ItemGroup>
-
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Classification\Gui\AddEditClassifierWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Classification\Gui\ClassificationsControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\AboutWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\ImageTypesControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\LogActivityControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\PreferencesControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\PreferencesWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Extractors\Gui\AddEditExtractorWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Extractors\Gui\ExtractorsControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FileMonitor\CustomMessageDecoderPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FileMonitor\FileMonitorProviderPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FileMonitor\MessageFormatPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Filters\Gui\AddEditFilterWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Filters\Gui\FiltersControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Highlighters\Gui\AddEditHighlighterWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Highlighters\Gui\HighlightersControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Images\Controls\AddImageWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Log4Net\ConfigurationPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Logs\Gui\AddNewLoggerWelcomePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Logs\Gui\NewLoggerSummaryPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Logs\Gui\ProvidersPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Logs\Gui\SetLoggerNamePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Logs\Gui\ViewSelectionPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MainApplication.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MSBuild\ConfigurationPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="NLog\NetworkConfigurationPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Providers\SelectProviderPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Gui\LogMessagesControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Gui\MultipleViewFrame.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Heartbeat\HeartbeatControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="WpfExtras\Wizard.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\Glyphs\SortDownArrow.png" />
     <Resource Include="Resources\Glyphs\SortUpArrow.png" />
@@ -81,4 +570,5 @@
     <Resource Include="Resources\Small\Unknown.png" />
     <Resource Include="Resources\Small\Warning.png" />
   </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

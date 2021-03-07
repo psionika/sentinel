@@ -327,9 +327,7 @@
                     </RibbonGroup.ItemTemplate>
                 </RibbonGroup>
             </RibbonTab>
-
-            <RibbonTab
-                Header="Highlighters">
+            <RibbonTab Header="Highlighters">
                 <RibbonGroup
                     Header="Options">
                     <RibbonButton
