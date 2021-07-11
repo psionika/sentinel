@@ -31,6 +31,19 @@
                   Grid.Column="0"
                   ScrollViewer.CanContentScroll="True"
                   ItemsSource="{Binding Messages}">
+            <ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem">
+                    <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+
+                    <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Disabled"/>
+                </Style>
+            </ListView.ItemContainerStyle>
+            <ListView.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Header="Copy row to clipboard" Click="ContextMenuCopyRowToClipboard_Click"/>
+                    <MenuItem Header="Copy description to clipboard" Click="ContextMenuCopyDescriptionToClipboard_Click"/>
+                </ContextMenu>
+            </ListView.ContextMenu>
             <ListView.View>
                 <GridView>
                     <Controls:FixedWidthColumn Header="Type">

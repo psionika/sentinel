@@ -89,6 +89,7 @@ namespace Sentinel.Views.Gui
             if (view?.Columns[0] is FixedWidthColumn)
             {
                 var fixedColumn = (FixedWidthColumn)view.Columns[0];
+
                 switch (selectedTypeOption)
                 {
                     case 0:
@@ -224,6 +225,61 @@ namespace Sentinel.Views.Gui
             else if (e.PropertyName == "DoubleClickToShowExceptions")
             {
                 DoubleClickToShowExceptions = Preferences.DoubleClickToShowExceptions;
+            }
+        }
+
+        private void ContextMenuCopyRowToClipboard_Click(object sender, RoutedEventArgs e)
+        {
+            if (messages.SelectedIndex == -1 || messages.SelectedItems.Count == 0)
+            {
+                return;
+            }
+
+            if (messages.SelectedItems.Count != 0)
+            {
+                var sb = new StringBuilder();
+                foreach (ILogEntry item in messages.SelectedItems)
+                {
+                    sb.AppendLine(
+                        $"{item.DateTime.ToLocalTime():yyyy-MM-dd HH:mm:ss.ffff}|{item.Type}|{item.System}|{item.Description}");
+                }
+
+                try
+                {
+                    Clipboard.SetData(DataFormats.Text, sb.ToString());
+                }
+                catch (Exception ex)
+                {
+                    throw new ApplicationException("Sentinel could not copy to the clipboard", ex);
+                }
+            }
+        }
+
+        private void ContextMenuCopyDescriptionToClipboard_Click(object sender, RoutedEventArgs e)
+        {
+            if (messages.SelectedIndex == -1 || messages.SelectedItems.Count == 0)
+            {
+                return;
+            }
+
+            if (messages.SelectedItems.Count != 0)
+            {
+                var sb = new StringBuilder();
+
+                foreach (ILogEntry item in messages.SelectedItems)
+                {
+                    sb.AppendLine(
+                        $"{item.Description}");
+                }
+
+                try
+                {
+                    Clipboard.SetData(DataFormats.Text, sb.ToString());
+                }
+                catch (Exception ex)
+                {
+                    throw new ApplicationException("Sentinel could not copy to the clipboard", ex);
+                }
             }
         }
     }
