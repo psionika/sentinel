@@ -1,10 +1,10 @@
-﻿namespace Sentinel.Extractors.Interfaces
+﻿using System.Collections.ObjectModel;
+using System.Runtime.Serialization;
+
+using Sentinel.Interfaces;
+
+namespace Sentinel.Extractors.Interfaces
 {
-    using System.Collections.ObjectModel;
-    using System.Runtime.Serialization;
-
-    using Sentinel.Interfaces;
-
     public interface IExtractingService<T>
     {
         [DataMember]

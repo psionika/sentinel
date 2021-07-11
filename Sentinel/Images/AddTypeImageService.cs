@@ -1,14 +1,14 @@
+using System;
+using System.Windows;
+
+using Sentinel.Images.Controls;
+using Sentinel.Images.Interfaces;
+using Sentinel.Services;
+
+using Sentinel.WpfExtras;
+
 namespace Sentinel.Images
 {
-    using System;
-    using System.Windows;
-
-    using Sentinel.Images.Controls;
-    using Sentinel.Images.Interfaces;
-    using Sentinel.Services;
-
-    using WpfExtras;
-
     public class AddTypeImageService : ViewModelBase, IAddTypeImage
     {
         private AddImageWindow addImageWindow;

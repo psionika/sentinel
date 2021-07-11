@@ -1,7 +1,7 @@
+using Sentinel.WpfExtras;
+
 namespace Sentinel.Images
 {
-    using WpfExtras;
-
     public class ImageTypeRecord : ViewModelBase
     {
         private string name;

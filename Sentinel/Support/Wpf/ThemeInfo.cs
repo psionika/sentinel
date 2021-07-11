@@ -1,10 +1,10 @@
-﻿namespace Sentinel.Support.Wpf
-{
-    using System;
-    using System.IO;
-    using System.Runtime.InteropServices;
-    using System.Text;
+﻿using System;
+using System.IO;
+using System.Runtime.InteropServices;
+using System.Text;
 
+namespace Sentinel.Support.Wpf
+{
     public static class ThemeInfo
     {
         private const int MaxPath = 260;

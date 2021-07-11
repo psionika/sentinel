@@ -1,10 +1,10 @@
+using System;
+using System.Collections.Generic;
+
+using Sentinel.Interfaces;
+
 namespace Sentinel.NLog
 {
-    using System;
-    using System.Collections.Generic;
-
-    using Sentinel.Interfaces;
-
     public class LogEntry : ILogEntry
     {
         public LogEntry()

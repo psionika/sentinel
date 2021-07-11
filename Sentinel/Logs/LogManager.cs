@@ -1,16 +1,16 @@
-﻿namespace Sentinel.Logs
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Diagnostics;
+
+using Sentinel.Interfaces;
+using Sentinel.Interfaces.CodeContracts;
+using Sentinel.Logs.Interfaces;
+
+using Sentinel.WpfExtras;
+
+namespace Sentinel.Logs
 {
-    using System;
-    using System.Collections;
-    using System.Collections.Generic;
-    using System.Diagnostics;
-
-    using Sentinel.Interfaces;
-    using Sentinel.Interfaces.CodeContracts;
-    using Sentinel.Logs.Interfaces;
-
-    using WpfExtras;
-
     public class LogManager : ViewModelBase, ILogManager
     {
         private readonly Dictionary<string, ILogger> loggers = new Dictionary<string, ILogger>();

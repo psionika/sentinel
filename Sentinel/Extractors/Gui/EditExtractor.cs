@@ -1,10 +1,10 @@
-﻿namespace Sentinel.Extractors.Gui
+﻿using System.Diagnostics;
+using System.Windows;
+
+using Sentinel.Extractors.Interfaces;
+
+namespace Sentinel.Extractors.Gui
 {
-    using System.Diagnostics;
-    using System.Windows;
-
-    using Sentinel.Extractors.Interfaces;
-
     public class EditExtractor : IEditExtractorService
     {
         public void Edit(IExtractor extractor)

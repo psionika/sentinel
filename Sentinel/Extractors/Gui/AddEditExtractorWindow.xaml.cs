@@ -1,7 +1,7 @@
-﻿namespace Sentinel.Extractors.Gui
-{
-    using System.Windows;
+﻿using System.Windows;
 
+namespace Sentinel.Extractors.Gui
+{
     /// <summary>
     /// Interaction logic for AddEditExtractorWindow.xaml.
     /// </summary>

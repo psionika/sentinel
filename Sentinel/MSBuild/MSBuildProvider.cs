@@ -1,20 +1,20 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Net;
+using System.Net.Sockets;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+using log4net;
+using Newtonsoft.Json.Linq;
+
+using Sentinel.Interfaces;
+using Sentinel.Interfaces.CodeContracts;
+using Sentinel.Interfaces.Providers;
+
 namespace Sentinel.MSBuild
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Net;
-    using System.Net.Sockets;
-    using System.Text;
-    using System.Threading;
-    using System.Threading.Tasks;
-    using log4net;
-    using Newtonsoft.Json.Linq;
-
-    using Sentinel.Interfaces;
-    using Sentinel.Interfaces.CodeContracts;
-    using Sentinel.Interfaces.Providers;
-
     public class MsBuildProvider : INetworkProvider
     {
         public static readonly IProviderRegistrationRecord ProviderRegistrationRecord =

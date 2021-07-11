@@ -1,10 +1,10 @@
-﻿namespace Sentinel.WpfExtras
-{
-    using System.Collections.ObjectModel;
-    using System.Collections.Specialized;
-    using System.ComponentModel;
-    using System.Linq;
+﻿using System.Collections.ObjectModel;
+using System.Collections.Specialized;
+using System.ComponentModel;
+using System.Linq;
 
+namespace Sentinel.WpfExtras
+{
     public class PageNavigationTreeEntry : INotifyPropertyChanged
     {
         private readonly ObservableCollection<PageNavigationTreeEntry> children;

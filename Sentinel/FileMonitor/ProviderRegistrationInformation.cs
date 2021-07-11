@@ -1,9 +1,9 @@
+using System;
+
+using Sentinel.Interfaces.Providers;
+
 namespace Sentinel.FileMonitor
 {
-    using System;
-
-    using Sentinel.Interfaces.Providers;
-
     public class ProviderRegistrationInformation : IProviderRegistrationRecord
     {
         public ProviderRegistrationInformation(IProviderInfo providerInfo)

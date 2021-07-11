@@ -1,16 +1,16 @@
-﻿namespace Sentinel.Logs.Gui
+﻿using System.Collections.ObjectModel;
+using System.Collections.Specialized;
+using System.Linq;
+using System.Text;
+
+using Sentinel.Providers.Interfaces;
+using Sentinel.Services;
+using Sentinel.Views.Interfaces;
+
+using Sentinel.WpfExtras;
+
+namespace Sentinel.Logs.Gui
 {
-    using System.Collections.ObjectModel;
-    using System.Collections.Specialized;
-    using System.Linq;
-    using System.Text;
-
-    using Sentinel.Providers.Interfaces;
-    using Sentinel.Services;
-    using Sentinel.Views.Interfaces;
-
-    using WpfExtras;
-
     public class NewLoggerSettings : ViewModelBase
     {
         private readonly InternalSettings settings = new InternalSettings();

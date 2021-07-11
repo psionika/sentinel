@@ -1,8 +1,8 @@
-﻿namespace Sentinel.Interfaces
-{
-    using System.Collections.Generic;
-    using System.ComponentModel;
+﻿using System.Collections.Generic;
+using System.ComponentModel;
 
+namespace Sentinel.Interfaces
+{
     /// <summary>
     /// Interface for a representation of a logger.
     /// </summary>

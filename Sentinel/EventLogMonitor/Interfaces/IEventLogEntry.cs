@@ -1,10 +1,10 @@
-﻿namespace Sentinel.EventLogMonitor.Interfaces
+﻿using System;
+using System.Diagnostics;
+
+using Newtonsoft.Json;
+
+namespace Sentinel.EventLogMonitor.Interfaces
 {
-    using System;
-    using System.Diagnostics;
-
-    using Newtonsoft.Json;
-
     public interface IEventLogEntry
     {
         [JsonProperty(Order = 1, Required = Required.Always)]

@@ -1,9 +1,9 @@
+using System.Runtime.Serialization;
+
+using Sentinel.Interfaces;
+
 namespace Sentinel.Highlighters.Interfaces
 {
-    using System.Runtime.Serialization;
-
-    using Sentinel.Interfaces;
-
     public interface IHighlighter
     {
         [DataMember]

@@ -1,9 +1,9 @@
+using System;
+
+using Sentinel.Interfaces.Providers;
+
 namespace Sentinel.Providers
 {
-    using System;
-
-    using Sentinel.Interfaces.Providers;
-
     public class ProviderInfo : IProviderInfo
     {
         public ProviderInfo(Guid uniqueId, string name, string description)

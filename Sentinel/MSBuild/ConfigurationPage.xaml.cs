@@ -1,14 +1,14 @@
-﻿namespace Sentinel.MSBuild
+﻿using System.Collections.ObjectModel;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Windows.Controls;
+
+using Sentinel.Interfaces.Providers;
+
+using Sentinel.WpfExtras;
+
+namespace Sentinel.MSBuild
 {
-    using System.Collections.ObjectModel;
-    using System.ComponentModel;
-    using System.Diagnostics;
-    using System.Windows.Controls;
-
-    using Sentinel.Interfaces.Providers;
-
-    using WpfExtras;
-
     /// <summary>
     /// Interaction logic for ConfigurationPage.xaml.
     /// </summary>

@@ -1,13 +1,13 @@
-﻿namespace Sentinel.Providers
+﻿using System;
+using System.Windows;
+
+using Sentinel.Interfaces.Providers;
+using Sentinel.Providers.Interfaces;
+
+using Sentinel.WpfExtras;
+
+namespace Sentinel.Providers
 {
-    using System;
-    using System.Windows;
-
-    using Sentinel.Interfaces.Providers;
-    using Sentinel.Providers.Interfaces;
-
-    using WpfExtras;
-
     public class NewProviderWizard : INewProviderWizard
     {
         public IProviderInfo Provider { get; private set; }

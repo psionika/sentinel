@@ -1,20 +1,20 @@
-﻿namespace Sentinel.Views.Gui
-{
-    using System;
-    using System.Collections.Generic;
-    using System.Collections.ObjectModel;
-    using System.ComponentModel;
-    using System.Diagnostics;
-    using System.Linq;
-    using System.Windows.Controls;
-    using System.Windows.Threading;
-    using Sentinel.Extractors.Interfaces;
-    using Sentinel.Filters.Interfaces;
-    using Sentinel.Interfaces;
-    using Sentinel.Services;
-    using Sentinel.Views.Interfaces;
-    using WpfExtras;
+﻿using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Linq;
+using System.Windows.Controls;
+using System.Windows.Threading;
+using Sentinel.Extractors.Interfaces;
+using Sentinel.Filters.Interfaces;
+using Sentinel.Interfaces;
+using Sentinel.Services;
+using Sentinel.Views.Interfaces;
+using Sentinel.WpfExtras;
 
+namespace Sentinel.Views.Gui
+{
     public class LogMessages : ViewModelBase, ILogViewer
     {
         public static readonly IViewInformation Info = new ViewInformation(ID, NAME);

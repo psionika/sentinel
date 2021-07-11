@@ -1,10 +1,10 @@
+using System.Runtime.Serialization;
+
+using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
+
 namespace Sentinel.Interfaces
 {
-    using System.Runtime.Serialization;
-
-    using Newtonsoft.Json;
-    using Newtonsoft.Json.Converters;
-
     /// <summary>
     /// Modes for matching strings.
     /// </summary>

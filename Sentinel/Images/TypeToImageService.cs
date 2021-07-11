@@ -1,17 +1,17 @@
+using System.Collections.ObjectModel;
+using System.Diagnostics;
+using System.Linq;
+using System.Runtime.Serialization;
+using System.Windows.Input;
+
+using Sentinel.Images.Interfaces;
+using Sentinel.Interfaces;
+using Sentinel.Interfaces.CodeContracts;
+
+using Sentinel.WpfExtras;
+
 namespace Sentinel.Images
 {
-    using System.Collections.ObjectModel;
-    using System.Diagnostics;
-    using System.Linq;
-    using System.Runtime.Serialization;
-    using System.Windows.Input;
-
-    using Sentinel.Images.Interfaces;
-    using Sentinel.Interfaces;
-    using Sentinel.Interfaces.CodeContracts;
-
-    using WpfExtras;
-
     [DataContract]
     public class TypeToImageService : ViewModelBase, ITypeImageService, IDefaultInitialisation
     {

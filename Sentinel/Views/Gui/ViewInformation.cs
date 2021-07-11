@@ -1,7 +1,7 @@
-﻿namespace Sentinel.Views.Gui
-{
-    using Sentinel.Views.Interfaces;
+﻿using Sentinel.Views.Interfaces;
 
+namespace Sentinel.Views.Gui
+{
     public class ViewInformation : IViewInformation
     {
         public ViewInformation(string identifier, string name)

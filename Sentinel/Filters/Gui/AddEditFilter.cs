@@ -1,12 +1,12 @@
+using System.Windows;
+using System.Windows.Input;
+
+using Sentinel.Interfaces;
+
+using Sentinel.WpfExtras;
+
 namespace Sentinel.Filters.Gui
 {
-    using System.Windows;
-    using System.Windows.Input;
-
-    using Sentinel.Interfaces;
-
-    using WpfExtras;
-
     public class AddEditFilter : ViewModelBase
     {
         private readonly Window window;

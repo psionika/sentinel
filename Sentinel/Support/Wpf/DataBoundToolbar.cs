@@ -1,8 +1,8 @@
-﻿namespace Sentinel.Support.Wpf
-{
-    using System.Windows.Controls;
-    using System.Windows.Threading;
+﻿using System.Windows.Controls;
+using System.Windows.Threading;
 
+namespace Sentinel.Support.Wpf
+{
     public class DataBoundToolbar : ToolBar
     {
         private delegate void InvalidateMeasurementDelegate();

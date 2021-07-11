@@ -1,46 +1,46 @@
-﻿namespace Sentinel.Services
+﻿using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.IO;
+using System.Linq;
+using System.Runtime.Serialization;
+using System.Text;
+using System.Windows;
+
+using Newtonsoft.Json.Linq;
+
+using Sentinel.Classification;
+using Sentinel.Classification.Interfaces;
+using Sentinel.Extractors;
+using Sentinel.Extractors.Interfaces;
+using Sentinel.FileMonitor;
+using Sentinel.Filters;
+using Sentinel.Filters.Interfaces;
+using Sentinel.Highlighters;
+using Sentinel.Highlighters.Interfaces;
+using Sentinel.Images;
+using Sentinel.Images.Interfaces;
+using Sentinel.Interfaces;
+using Sentinel.Interfaces.Providers;
+using Sentinel.Log4Net;
+using Sentinel.Logger;
+using Sentinel.Logs;
+using Sentinel.Logs.Gui;
+using Sentinel.Logs.Interfaces;
+using Sentinel.NLog;
+using Sentinel.Preferences;
+using Sentinel.Providers;
+using Sentinel.Providers.Interfaces;
+using Sentinel.Services.Interfaces;
+using Sentinel.Support;
+using Sentinel.Views;
+using Sentinel.Views.Gui;
+using Sentinel.Views.Interfaces;
+
+using Sentinel.WpfExtras;
+
+namespace Sentinel.Services
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Diagnostics;
-    using System.IO;
-    using System.Linq;
-    using System.Runtime.Serialization;
-    using System.Text;
-    using System.Windows;
-
-    using Newtonsoft.Json.Linq;
-
-    using Sentinel.Classification;
-    using Sentinel.Classification.Interfaces;
-    using Sentinel.Extractors;
-    using Sentinel.Extractors.Interfaces;
-    using Sentinel.FileMonitor;
-    using Sentinel.Filters;
-    using Sentinel.Filters.Interfaces;
-    using Sentinel.Highlighters;
-    using Sentinel.Highlighters.Interfaces;
-    using Sentinel.Images;
-    using Sentinel.Images.Interfaces;
-    using Sentinel.Interfaces;
-    using Sentinel.Interfaces.Providers;
-    using Sentinel.Log4Net;
-    using Sentinel.Logger;
-    using Sentinel.Logs;
-    using Sentinel.Logs.Gui;
-    using Sentinel.Logs.Interfaces;
-    using Sentinel.NLog;
-    using Sentinel.Preferences;
-    using Sentinel.Providers;
-    using Sentinel.Providers.Interfaces;
-    using Sentinel.Services.Interfaces;
-    using Sentinel.Support;
-    using Sentinel.Views;
-    using Sentinel.Views.Gui;
-    using Sentinel.Views.Interfaces;
-
-    using WpfExtras;
-
     [DataContract]
     public class SessionManager : ISessionManager
     {

@@ -1,16 +1,16 @@
-﻿namespace Sentinel.Views.Heartbeat
-{
-    using System;
-    using System.Collections.Generic;
-    using System.Collections.ObjectModel;
-    using System.ComponentModel;
-    using System.Linq;
-    using System.Windows;
-    using System.Windows.Media;
-    using System.Windows.Shapes;
-    using System.Windows.Threading;
-    using Sentinel.Support.Wpf;
+﻿using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.ComponentModel;
+using System.Linq;
+using System.Windows;
+using System.Windows.Media;
+using System.Windows.Shapes;
+using System.Windows.Threading;
+using Sentinel.Support.Wpf;
 
+namespace Sentinel.Views.Heartbeat
+{
     /// <summary>
     ///   Interaction logic for HeartbeatControl.xaml.
     /// </summary>

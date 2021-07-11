@@ -1,14 +1,14 @@
-﻿namespace Sentinel.Logs.Gui
+﻿using System.Collections.ObjectModel;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Linq;
+using System.Windows.Controls;
+
+using Sentinel.Logs.Interfaces;
+using Sentinel.WpfExtras;
+
+namespace Sentinel.Logs.Gui
 {
-    using System.Collections.ObjectModel;
-    using System.ComponentModel;
-    using System.Diagnostics;
-    using System.Linq;
-    using System.Windows.Controls;
-
-    using Sentinel.Logs.Interfaces;
-    using WpfExtras;
-
     /// <summary>
     /// Interaction logic for SetLoggerNamePage.xaml.
     /// </summary>

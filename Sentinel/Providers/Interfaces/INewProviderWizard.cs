@@ -1,9 +1,9 @@
-﻿namespace Sentinel.Providers.Interfaces
+﻿using System.Windows;
+
+using Sentinel.Interfaces.Providers;
+
+namespace Sentinel.Providers.Interfaces
 {
-    using System.Windows;
-
-    using Sentinel.Interfaces.Providers;
-
     public interface INewProviderWizard
     {
         IProviderInfo Provider { get; }

@@ -1,11 +1,11 @@
-﻿namespace Sentinel.Logs
+﻿using System.IO;
+using System.Text;
+
+using Sentinel.Logs.Interfaces;
+using Sentinel.Views.Interfaces;
+
+namespace Sentinel.Logs
 {
-    using System.IO;
-    using System.Text;
-
-    using Sentinel.Logs.Interfaces;
-    using Sentinel.Views.Interfaces;
-
     public class LogFileExporter : ILogFileExporter
     {
         public LogFileExporter()

@@ -1,21 +1,21 @@
-﻿namespace Sentinel.Logs.Gui
+﻿using System.Collections.ObjectModel;
+using System.Collections.Specialized;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Linq;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Input;
+using log4net;
+using Sentinel.Interfaces.Providers;
+using Sentinel.NLog;
+using Sentinel.Providers.Interfaces;
+using Sentinel.Services;
+
+using Sentinel.WpfExtras;
+
+namespace Sentinel.Logs.Gui
 {
-    using System.Collections.ObjectModel;
-    using System.Collections.Specialized;
-    using System.ComponentModel;
-    using System.Diagnostics;
-    using System.Linq;
-    using System.Windows;
-    using System.Windows.Controls;
-    using System.Windows.Input;
-    using log4net;
-    using Sentinel.Interfaces.Providers;
-    using Sentinel.NLog;
-    using Sentinel.Providers.Interfaces;
-    using Sentinel.Services;
-
-    using WpfExtras;
-
     /// <summary>
     /// Interaction logic for ProvidersPage.xaml.
     /// </summary>

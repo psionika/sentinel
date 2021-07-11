@@ -1,11 +1,11 @@
-﻿namespace Sentinel.Support
-{
-    using System;
-    using System.Windows;
-    using System.Windows.Controls;
-    using System.Windows.Media;
-    using System.Windows.Threading;
+﻿using System;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Media;
+using System.Windows.Threading;
 
+namespace Sentinel.Support
+{
     public static class ScrollingHelper
     {
         public delegate void VoidFunctionHandler(ListBox listBox);

@@ -1,7 +1,7 @@
-﻿namespace Sentinel.Highlighters.Gui
-{
-    using System.Windows;
+﻿using System.Windows;
 
+namespace Sentinel.Highlighters.Gui
+{
     /// <summary>
     /// Interaction logic for AddEditHighlighterWindow.xaml.
     /// </summary>

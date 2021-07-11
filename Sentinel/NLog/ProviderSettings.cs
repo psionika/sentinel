@@ -1,9 +1,9 @@
-﻿namespace Sentinel.NLog
+﻿using System.Runtime.Serialization;
+
+using Sentinel.Interfaces.Providers;
+
+namespace Sentinel.NLog
 {
-    using System.Runtime.Serialization;
-
-    using Sentinel.Interfaces.Providers;
-
     [DataContract]
     public class ProviderSettings : IProviderSettings
     {

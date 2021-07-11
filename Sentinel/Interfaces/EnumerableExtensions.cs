@@ -1,8 +1,8 @@
+using System.Collections.Generic;
+using System.Linq;
+
 namespace Sentinel.Interfaces
 {
-    using System.Collections.Generic;
-    using System.Linq;
-
     public static class EnumerableExtensions
     {
         public static int IndexOf<T>(this IEnumerable<T> list, T value)

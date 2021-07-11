@@ -1,11 +1,11 @@
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Windows;
+using Sentinel.Interfaces;
+
 namespace Sentinel.Logger
 {
-    using System;
-    using System.Collections.Generic;
-    using System.IO;
-    using System.Windows;
-    using Sentinel.Interfaces;
-
     /// <summary>
     /// This service provider permits the writing of log entries to
     /// a text file.

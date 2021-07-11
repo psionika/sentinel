@@ -1,13 +1,13 @@
+using System;
+using System.Globalization;
+using System.Xml.Linq;
+
+using log4net;
+using Sentinel.Interfaces;
+using Sentinel.Interfaces.CodeContracts;
+
 namespace Sentinel.Log4Net
 {
-    using System;
-    using System.Globalization;
-    using System.Xml.Linq;
-
-    using log4net;
-    using Sentinel.Interfaces;
-    using Sentinel.Interfaces.CodeContracts;
-
     public static class XElementHelpers
     {
         private static readonly ILog Log = LogManager.GetLogger("XElementHelpers");

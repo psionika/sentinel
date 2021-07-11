@@ -1,9 +1,9 @@
+using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+
 namespace Sentinel.Views.Interfaces
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Collections.ObjectModel;
-
     public interface IViewManager
     {
         ObservableCollection<IWindowFrame> Viewers { get; }

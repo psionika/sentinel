@@ -1,11 +1,11 @@
-﻿namespace Sentinel.Support.Converters
-{
-    using System;
-    using System.Globalization;
-    using System.IO;
-    using System.Text;
-    using System.Windows.Data;
+﻿using System;
+using System.Globalization;
+using System.IO;
+using System.Text;
+using System.Windows.Data;
 
+namespace Sentinel.Support.Converters
+{
     [ValueConversion(typeof(string), typeof(string))]
     public class LongPathToShortPathConverter : IValueConverter
     {

@@ -1,11 +1,11 @@
+using System;
+using System.Linq;
+
+using Sentinel.Interfaces;
+using Sentinel.Interfaces.CodeContracts;
+
 namespace Sentinel.Services
 {
-    using System;
-    using System.Linq;
-
-    using Sentinel.Interfaces;
-    using Sentinel.Interfaces.CodeContracts;
-
     public static class AttributeHelper
     {
         public static bool HasAttribute<T>(this Type type)

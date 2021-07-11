@@ -1,18 +1,18 @@
-﻿namespace Sentinel.Classification
+﻿using System.Collections.ObjectModel;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Linq;
+using System.Runtime.Serialization;
+using System.Windows.Input;
+
+using Sentinel.Classification.Gui;
+using Sentinel.Classification.Interfaces;
+using Sentinel.Interfaces;
+
+using Sentinel.WpfExtras;
+
+namespace Sentinel.Classification
 {
-    using System.Collections.ObjectModel;
-    using System.ComponentModel;
-    using System.Diagnostics;
-    using System.Linq;
-    using System.Runtime.Serialization;
-    using System.Windows.Input;
-
-    using Sentinel.Classification.Gui;
-    using Sentinel.Classification.Interfaces;
-    using Sentinel.Interfaces;
-
-    using WpfExtras;
-
     /// <summary>
     /// View Model for classifier collection.  This has been written to operate
     /// as a ServiceLocator provided resource, so there is only one collection

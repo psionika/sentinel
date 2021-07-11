@@ -1,11 +1,11 @@
+using System;
+using System.Runtime.Serialization;
+
+using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
+
 namespace Sentinel.Interfaces
 {
-    using System;
-    using System.Runtime.Serialization;
-
-    using Newtonsoft.Json;
-    using Newtonsoft.Json.Converters;
-
     /// <summary>
     /// An enumeration of the possible fields within a LogEntry so that
     /// a reference can be made to a specific property, for example,

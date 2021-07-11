@@ -1,7 +1,7 @@
+using CommandLine;
+
 namespace Sentinel.StartUp
 {
-    using CommandLine;
-
     [Verb("log4net", HelpText = "Use log4net listener")]
     public class Log4NetOptions : IOptions
     {

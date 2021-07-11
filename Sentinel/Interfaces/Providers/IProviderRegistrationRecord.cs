@@ -1,7 +1,7 @@
-﻿namespace Sentinel.Interfaces.Providers
-{
-    using System;
+﻿using System;
 
+namespace Sentinel.Interfaces.Providers
+{
     public interface IProviderRegistrationRecord
     {
         Guid Identifier { get; }

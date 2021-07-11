@@ -1,9 +1,9 @@
-﻿namespace Sentinel.WpfExtras
-{
-    using System.Collections.ObjectModel;
-    using System.ComponentModel;
-    using System.Windows.Controls;
+﻿using System.Collections.ObjectModel;
+using System.ComponentModel;
+using System.Windows.Controls;
 
+namespace Sentinel.WpfExtras
+{
     public interface IWizardPage
         : INotifyPropertyChanged
     {

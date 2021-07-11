@@ -1,8 +1,8 @@
+using System;
+using System.Collections.Generic;
+
 namespace Sentinel.Interfaces
 {
-    using System;
-    using System.Collections.Generic;
-
     public interface ILogEntry
     {
         /// <summary>

@@ -1,10 +1,10 @@
-﻿namespace Sentinel.Classification.Gui
+﻿using System.Diagnostics;
+using System.Windows;
+
+using Sentinel.Classification.Interfaces;
+
+namespace Sentinel.Classification.Gui
 {
-    using System.Diagnostics;
-    using System.Windows;
-
-    using Sentinel.Classification.Interfaces;
-
     public class EditClassifier : IEditClassifyingService
     {
         public void Edit(IClassifier classifier)

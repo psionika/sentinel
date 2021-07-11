@@ -1,10 +1,10 @@
-﻿namespace Sentinel.Controls
-{
-    using System.Diagnostics;
-    using System.IO;
-    using System.Reflection;
-    using System.Windows;
+﻿using System.Diagnostics;
+using System.IO;
+using System.Reflection;
+using System.Windows;
 
+namespace Sentinel.Controls
+{
     /// <summary>
     /// Interaction logic for AboutWindow.xaml.
     /// </summary>

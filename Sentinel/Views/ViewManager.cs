@@ -1,15 +1,15 @@
-﻿namespace Sentinel.Views
+﻿using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Diagnostics;
+using System.Linq;
+
+using Sentinel.Views.Gui;
+using Sentinel.Views.Heartbeat;
+using Sentinel.Views.Interfaces;
+
+namespace Sentinel.Views
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Collections.ObjectModel;
-    using System.Diagnostics;
-    using System.Linq;
-
-    using Sentinel.Views.Gui;
-    using Sentinel.Views.Heartbeat;
-    using Sentinel.Views.Interfaces;
-
     public class ViewManager : IViewManager
     {
         private readonly Dictionary<IViewInformation, Type> registeredTypes = new Dictionary<IViewInformation, Type>();

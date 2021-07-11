@@ -1,20 +1,20 @@
+using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Linq;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Input;
+using System.Windows.Media;
+using Sentinel.Highlighters.Interfaces;
+using Sentinel.Interfaces;
+using Sentinel.Interfaces.CodeContracts;
+using Sentinel.Services;
+using Sentinel.Support.Wpf;
+
 namespace Sentinel.Highlighters
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Diagnostics;
-    using System.Linq;
-    using System.Windows;
-    using System.Windows.Controls;
-    using System.Windows.Data;
-    using System.Windows.Input;
-    using System.Windows.Media;
-    using Sentinel.Highlighters.Interfaces;
-    using Sentinel.Interfaces;
-    using Sentinel.Interfaces.CodeContracts;
-    using Sentinel.Services;
-    using Sentinel.Support.Wpf;
-
     /// <summary>
     /// Style selector that provides a implements the highlighters of the QuickHighlighter
     /// (fancy name for the highlighting of results for the search box) and other registered

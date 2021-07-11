@@ -1,12 +1,12 @@
+using System;
+using System.IO;
+
+using log4net;
+
+using Newtonsoft.Json;
+
 namespace Sentinel.Support
 {
-    using System;
-    using System.IO;
-
-    using log4net;
-
-    using Newtonsoft.Json;
-
     public static class JsonHelper
     {
         private static readonly ILog Log = LogManager.GetLogger(nameof(JsonHelper));

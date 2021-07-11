@@ -1,9 +1,9 @@
+using System.Runtime.Serialization;
+
+using Sentinel.Interfaces;
+
 namespace Sentinel.Filters.Interfaces
 {
-    using System.Runtime.Serialization;
-
-    using Sentinel.Interfaces;
-
     public interface IFilter
     {
         [DataMember]

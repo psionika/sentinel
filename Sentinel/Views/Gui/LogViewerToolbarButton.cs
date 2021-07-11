@@ -1,12 +1,12 @@
-﻿namespace Sentinel.Views.Gui
+﻿using System.Diagnostics;
+using System.Windows.Input;
+
+using Sentinel.Views.Interfaces;
+
+using Sentinel.WpfExtras;
+
+namespace Sentinel.Views.Gui
 {
-    using System.Diagnostics;
-    using System.Windows.Input;
-
-    using Sentinel.Views.Interfaces;
-
-    using WpfExtras;
-
     public class LogViewerToolbarButton
         : ViewModelBase, ILogViewerToolbarButton
     {

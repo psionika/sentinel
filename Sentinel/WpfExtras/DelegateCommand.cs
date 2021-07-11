@@ -1,8 +1,8 @@
-﻿namespace Sentinel.WpfExtras
-{
-    using System;
-    using System.Windows.Input;
+﻿using System;
+using System.Windows.Input;
 
+namespace Sentinel.WpfExtras
+{
     public class DelegateCommand : ICommand
     {
         public DelegateCommand(Action<object> executeAction, Predicate<object> canExecute = null)

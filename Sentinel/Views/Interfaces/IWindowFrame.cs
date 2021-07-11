@@ -1,9 +1,9 @@
-﻿namespace Sentinel.Views.Interfaces
+﻿using System.Collections.Generic;
+
+using Sentinel.Interfaces;
+
+namespace Sentinel.Views.Interfaces
 {
-    using System.Collections.Generic;
-
-    using Sentinel.Interfaces;
-
     public interface IWindowFrame
     {
         ILogger Log { get; set; }

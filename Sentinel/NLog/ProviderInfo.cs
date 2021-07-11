@@ -1,9 +1,9 @@
+using System;
+
+using Sentinel.Interfaces.Providers;
+
 namespace Sentinel.NLog
 {
-    using System;
-
-    using Sentinel.Interfaces.Providers;
-
     internal class ProviderInfo : IProviderInfo
     {
         public Guid Identifier => new Guid("F12581A5-64C0-4B35-91FC-81C9A09C1E0B");

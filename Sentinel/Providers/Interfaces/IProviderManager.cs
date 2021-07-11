@@ -1,10 +1,10 @@
+using System;
+using System.Collections.Generic;
+
+using Sentinel.Interfaces.Providers;
+
 namespace Sentinel.Providers.Interfaces
 {
-    using System;
-    using System.Collections.Generic;
-
-    using Sentinel.Interfaces.Providers;
-
     public interface IProviderManager : IEnumerable<Guid>
     {
         IEnumerable<ILogProvider> Instances { get; }

@@ -1,10 +1,10 @@
-﻿namespace Sentinel.Logs.Gui
+﻿using System.Diagnostics;
+using System.Windows;
+
+using Sentinel.WpfExtras;
+
+namespace Sentinel.Logs.Gui
 {
-    using System.Diagnostics;
-    using System.Windows;
-
-    using WpfExtras;
-
     public class NewLoggerWizard
     {
         public NewLoggerWizard()

@@ -1,12 +1,12 @@
-﻿namespace Sentinel.Preferences
-{
-    using System.Collections.Generic;
-    using System.Runtime.Serialization;
-    using log4net;
-    using Sentinel.Interfaces;
-    using Sentinel.Support.Wpf;
-    using WpfExtras;
+﻿using System.Collections.Generic;
+using System.Runtime.Serialization;
+using log4net;
+using Sentinel.Interfaces;
+using Sentinel.Support.Wpf;
+using Sentinel.WpfExtras;
 
+namespace Sentinel.Preferences
+{
     /// <summary>
     /// An implementation of the IUserPreferences which holds all of the user
     /// selections in a view-model based structure, allowing simple binding to

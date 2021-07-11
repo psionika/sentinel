@@ -1,23 +1,23 @@
-﻿namespace Sentinel.Views.Gui
+﻿using System;
+using System.ComponentModel;
+using System.Runtime.InteropServices;
+using System.Text;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Input;
+using log4net;
+using Sentinel.Highlighters;
+using Sentinel.Highlighters.Interfaces;
+using Sentinel.Interfaces;
+using Sentinel.Interfaces.CodeContracts;
+
+using Sentinel.Services;
+using Sentinel.Support;
+using Sentinel.Support.Wpf;
+
+namespace Sentinel.Views.Gui
 {
-    using System;
-    using System.ComponentModel;
-    using System.Runtime.InteropServices;
-    using System.Text;
-    using System.Windows;
-    using System.Windows.Controls;
-    using System.Windows.Data;
-    using System.Windows.Input;
-    using log4net;
-    using Sentinel.Highlighters;
-    using Sentinel.Highlighters.Interfaces;
-    using Sentinel.Interfaces;
-    using Sentinel.Interfaces.CodeContracts;
-
-    using Sentinel.Services;
-    using Sentinel.Support;
-    using Sentinel.Support.Wpf;
-
     /// <summary>
     /// Interaction logic for LogMessagesControl.xaml.
     /// </summary>

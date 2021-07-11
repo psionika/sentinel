@@ -1,7 +1,7 @@
-﻿namespace Sentinel.StartUp
-{
-    using CommandLine;
+﻿using CommandLine;
 
+namespace Sentinel.StartUp
+{
     [Verb("nlog", HelpText = "Use nlog listener")]
     public class NLogOptions : IOptions
     {

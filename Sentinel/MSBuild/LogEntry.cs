@@ -1,13 +1,13 @@
+using System;
+using System.Collections.Generic;
+
+using Newtonsoft.Json.Linq;
+
+using Sentinel.Interfaces;
+using Sentinel.Interfaces.CodeContracts;
+
 namespace Sentinel.MSBuild
 {
-    using System;
-    using System.Collections.Generic;
-
-    using Newtonsoft.Json.Linq;
-
-    using Sentinel.Interfaces;
-    using Sentinel.Interfaces.CodeContracts;
-
     internal class LogEntry : ILogEntry
     {
         public LogEntry()

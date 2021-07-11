@@ -1,16 +1,16 @@
+using System;
+using System.Collections.Generic;
+using System.Globalization;
+using System.Linq;
+using System.Windows.Data;
+
+using log4net;
+
+using Sentinel.Interfaces;
+using Sentinel.Interfaces.CodeContracts;
+
 namespace Sentinel.Support.Converters
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Globalization;
-    using System.Linq;
-    using System.Windows.Data;
-
-    using log4net;
-    
-    using Sentinel.Interfaces;
-    using Sentinel.Interfaces.CodeContracts;
-
     public class TimePreferenceConverter : IValueConverter
     {
         private static readonly ILog Log = LogManager.GetLogger(typeof(TimePreferenceConverter));

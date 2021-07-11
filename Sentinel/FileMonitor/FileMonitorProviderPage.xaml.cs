@@ -1,21 +1,21 @@
-﻿namespace Sentinel.FileMonitor
+﻿using System;
+using System.Collections.ObjectModel;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.IO;
+using System.Security;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Input;
+
+using Microsoft.Win32;
+
+using Sentinel.Interfaces.Providers;
+
+using Sentinel.WpfExtras;
+
+namespace Sentinel.FileMonitor
 {
-    using System;
-    using System.Collections.ObjectModel;
-    using System.ComponentModel;
-    using System.Diagnostics;
-    using System.IO;
-    using System.Security;
-    using System.Windows;
-    using System.Windows.Controls;
-    using System.Windows.Input;
-
-    using Microsoft.Win32;
-
-    using Sentinel.Interfaces.Providers;
-
-    using WpfExtras;
-
     /// <summary>
     ///   Interaction logic for FileMonitorProviderPage.xaml.
     /// </summary>

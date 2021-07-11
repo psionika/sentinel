@@ -1,10 +1,10 @@
+using System;
+using System.Collections.Generic;
+
+using Sentinel.Interfaces;
+
 namespace Sentinel.Log4Net
 {
-    using System;
-    using System.Collections.Generic;
-
-    using Sentinel.Interfaces;
-
     internal class LogEntry : ILogEntry
     {
         public LogEntry()

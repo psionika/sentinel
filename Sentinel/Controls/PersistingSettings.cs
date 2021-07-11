@@ -1,11 +1,11 @@
-﻿namespace Sentinel.Controls
-{
-    using System;
-    using System.Diagnostics;
-    using System.Runtime.Serialization;
-    using Sentinel.Interfaces;
-    using Sentinel.Support;
+﻿using System;
+using System.Diagnostics;
+using System.Runtime.Serialization;
+using Sentinel.Interfaces;
+using Sentinel.Support;
 
+namespace Sentinel.Controls
+{
     [DataContract]
     public class PersistingSettings
     {

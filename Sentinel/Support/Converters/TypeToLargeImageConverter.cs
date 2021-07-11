@@ -1,7 +1,7 @@
+using Sentinel.Images;
+
 namespace Sentinel.Support.Converters
 {
-    using Sentinel.Images;
-
     public class TypeToLargeImageConverter : TypeToImageConverter
     {
         public TypeToLargeImageConverter()

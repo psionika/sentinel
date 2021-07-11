@@ -1,11 +1,11 @@
+using System.Diagnostics;
+using System.Windows;
+using System.Windows.Media;
+
+using Sentinel.Highlighters.Interfaces;
+
 namespace Sentinel.Highlighters.Gui
 {
-    using System.Diagnostics;
-    using System.Windows;
-    using System.Windows.Media;
-
-    using Sentinel.Highlighters.Interfaces;
-
     // [Export(typeof(IEditHighlighterService))]
     public class EditHighlighterService : IEditHighlighterService
     {

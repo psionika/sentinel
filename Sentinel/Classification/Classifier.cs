@@ -1,14 +1,14 @@
-﻿namespace Sentinel.Classification
+﻿using System.Diagnostics;
+using System.Runtime.Serialization;
+using System.Text.RegularExpressions;
+
+using Sentinel.Classification.Interfaces;
+using Sentinel.Interfaces;
+
+using Sentinel.WpfExtras;
+
+namespace Sentinel.Classification
 {
-    using System.Diagnostics;
-    using System.Runtime.Serialization;
-    using System.Text.RegularExpressions;
-
-    using Sentinel.Classification.Interfaces;
-    using Sentinel.Interfaces;
-
-    using WpfExtras;
-
     [DataContract]
     public class Classifier : ViewModelBase, IClassifier
     {

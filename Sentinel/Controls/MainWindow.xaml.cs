@@ -1,41 +1,41 @@
-﻿namespace Sentinel.Controls
-{
-    using System;
-    using System.Collections.Generic;
-    using System.Collections.ObjectModel;
-    using System.Collections.Specialized;
-    using System.ComponentModel;
-    using System.Diagnostics;
-    using System.IO;
-    using System.Linq;
-    using System.Reflection;
-    using System.Windows;
-    using System.Windows.Controls;
-    using System.Windows.Controls.Primitives;
-    using System.Windows.Controls.Ribbon;
-    using System.Windows.Data;
-    using System.Windows.Input;
-    using CommandLine;
-    using log4net;
-    using Microsoft.Win32;
-    using Sentinel.Classification.Interfaces;
-    using Sentinel.Extractors.Interfaces;
-    using Sentinel.Filters.Interfaces;
-    using Sentinel.Highlighters.Interfaces;
-    using Sentinel.Interfaces;
-    using Sentinel.Interfaces.CodeContracts;
-    using Sentinel.Log4Net;
-    using Sentinel.Logs.Interfaces;
-    using Sentinel.NLog;
-    using Sentinel.Providers.Interfaces;
-    using Sentinel.Services;
-    using Sentinel.Services.Interfaces;
-    using Sentinel.StartUp;
-    using Sentinel.Support;
-    using Sentinel.Views.Interfaces;
-    using WpfExtras;
-    using WpfExtras.Converters;
+﻿using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Collections.Specialized;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.IO;
+using System.Linq;
+using System.Reflection;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Controls.Primitives;
+using System.Windows.Controls.Ribbon;
+using System.Windows.Data;
+using System.Windows.Input;
+using CommandLine;
+using log4net;
+using Microsoft.Win32;
+using Sentinel.Classification.Interfaces;
+using Sentinel.Extractors.Interfaces;
+using Sentinel.Filters.Interfaces;
+using Sentinel.Highlighters.Interfaces;
+using Sentinel.Interfaces;
+using Sentinel.Interfaces.CodeContracts;
+using Sentinel.Log4Net;
+using Sentinel.Logs.Interfaces;
+using Sentinel.NLog;
+using Sentinel.Providers.Interfaces;
+using Sentinel.Services;
+using Sentinel.Services.Interfaces;
+using Sentinel.StartUp;
+using Sentinel.Support;
+using Sentinel.Views.Interfaces;
+using Sentinel.WpfExtras;
+using Sentinel.WpfExtras.Converters;
 
+namespace Sentinel.Controls
+{
     /// <summary>
     /// Interaction logic for MainWindow.xaml.
     /// </summary>

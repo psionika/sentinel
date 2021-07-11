@@ -1,7 +1,7 @@
-﻿namespace Sentinel.Images.Controls
-{
-    using System.Windows;
+﻿using System.Windows;
 
+namespace Sentinel.Images.Controls
+{
     /// <summary>
     /// Interaction logic for AddImageWindow.xaml.
     /// </summary>

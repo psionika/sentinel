@@ -1,8 +1,8 @@
-﻿namespace Sentinel.Controls
-{
-    using Sentinel.Highlighters.Interfaces;
-    using Sentinel.Services;
+﻿using Sentinel.Highlighters.Interfaces;
+using Sentinel.Services;
 
+namespace Sentinel.Controls
+{
     /// <summary>
     /// Interaction logic for LogActivityControl.xaml.
     /// </summary>

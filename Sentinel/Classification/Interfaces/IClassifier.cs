@@ -1,9 +1,9 @@
+using System.Runtime.Serialization;
+
+using Sentinel.Interfaces;
+
 namespace Sentinel.Classification.Interfaces
 {
-    using System.Runtime.Serialization;
-
-    using Sentinel.Interfaces;
-
     public interface IClassifier
     {
         [DataMember]

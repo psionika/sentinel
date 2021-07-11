@@ -1,14 +1,14 @@
-﻿namespace Sentinel.Services.Interfaces
+﻿using System.Collections.Generic;
+using System.Runtime.Serialization;
+using System.Windows;
+
+using Sentinel.Interfaces.Providers;
+using Sentinel.Providers.Interfaces;
+
+using Sentinel.WpfExtras;
+
+namespace Sentinel.Services.Interfaces
 {
-    using System.Collections.Generic;
-    using System.Runtime.Serialization;
-    using System.Windows;
-
-    using Sentinel.Interfaces.Providers;
-    using Sentinel.Providers.Interfaces;
-
-    using WpfExtras;
-
     public interface ISessionManager
     {
         /// <summary>

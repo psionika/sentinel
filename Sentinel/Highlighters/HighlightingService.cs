@@ -1,19 +1,19 @@
-﻿namespace Sentinel.Highlighters
+﻿using System.Collections.ObjectModel;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Linq;
+using System.Runtime.Serialization;
+using System.Windows.Input;
+using System.Windows.Media;
+
+using Sentinel.Highlighters.Gui;
+using Sentinel.Highlighters.Interfaces;
+using Sentinel.Interfaces;
+
+using Sentinel.WpfExtras;
+
+namespace Sentinel.Highlighters
 {
-    using System.Collections.ObjectModel;
-    using System.ComponentModel;
-    using System.Diagnostics;
-    using System.Linq;
-    using System.Runtime.Serialization;
-    using System.Windows.Input;
-    using System.Windows.Media;
-
-    using Sentinel.Highlighters.Gui;
-    using Sentinel.Highlighters.Interfaces;
-    using Sentinel.Interfaces;
-
-    using WpfExtras;
-
     [DataContract]
     public class HighlightingService<T> : ViewModelBase, IHighlightingService<T>, IDefaultInitialisation
         where T : class, IHighlighter

@@ -1,22 +1,22 @@
-﻿namespace Sentinel.FileMonitor
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Globalization;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Text.RegularExpressions;
+using System.Threading;
+using System.Windows;
+
+using log4net;
+using Sentinel.Interfaces;
+using Sentinel.Interfaces.CodeContracts;
+using Sentinel.Interfaces.Providers;
+
+namespace Sentinel.FileMonitor
 {
-    using System;
-    using System.Collections.Generic;
-    using System.ComponentModel;
-    using System.Diagnostics;
-    using System.Globalization;
-    using System.IO;
-    using System.Linq;
-    using System.Text;
-    using System.Text.RegularExpressions;
-    using System.Threading;
-    using System.Windows;
-
-    using log4net;
-    using Sentinel.Interfaces;
-    using Sentinel.Interfaces.CodeContracts;
-    using Sentinel.Interfaces.Providers;
-
     public class FileMonitoringProvider : ILogProvider, IDisposable
     {
         private const string LoggerIdentifier = "Logger";

@@ -1,20 +1,20 @@
-﻿namespace Sentinel.Support
+﻿using System;
+using System.ComponentModel;
+using System.Diagnostics.CodeAnalysis;
+using System.Diagnostics.Contracts;
+using System.Linq;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Controls.Primitives;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+
+using Sentinel.Interfaces;
+using Sentinel.Interfaces.CodeContracts;
+
+namespace Sentinel.Support
 {
-    using System;
-    using System.ComponentModel;
-    using System.Diagnostics.CodeAnalysis;
-    using System.Diagnostics.Contracts;
-    using System.Linq;
-    using System.Windows;
-    using System.Windows.Controls;
-    using System.Windows.Controls.Primitives;
-    using System.Windows.Documents;
-    using System.Windows.Input;
-    using System.Windows.Media;
-
-    using Sentinel.Interfaces;
-    using Sentinel.Interfaces.CodeContracts;
-
     public static class GridViewSort
     {
         public static readonly DependencyProperty AutoSortProperty;

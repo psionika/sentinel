@@ -1,14 +1,14 @@
+using System.Diagnostics;
+using System.Runtime.Serialization;
+using System.Text.RegularExpressions;
+
+using Sentinel.Highlighters.Interfaces;
+using Sentinel.Interfaces;
+
+using Sentinel.WpfExtras;
+
 namespace Sentinel.Highlighters
 {
-    using System.Diagnostics;
-    using System.Runtime.Serialization;
-    using System.Text.RegularExpressions;
-
-    using Sentinel.Highlighters.Interfaces;
-    using Sentinel.Interfaces;
-
-    using WpfExtras;
-
     [DataContract]
     public class Highlighter : ViewModelBase, IHighlighter
     {

@@ -1,7 +1,7 @@
-﻿namespace Sentinel.Views.Interfaces
-{
-    using System.Windows.Input;
+﻿using System.Windows.Input;
 
+namespace Sentinel.Views.Interfaces
+{
     public interface ILogViewerToolbarButton
     {
         string Tooltip { get; }

@@ -1,10 +1,10 @@
+using System.Windows;
+
+using Sentinel.Filters.Interfaces;
+using Sentinel.Services;
+
 namespace Sentinel.Filters.Gui
 {
-    using System.Windows;
-
-    using Sentinel.Filters.Interfaces;
-    using Sentinel.Services;
-
     public class AddFilter : IAddFilterService
     {
         public void Add()

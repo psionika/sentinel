@@ -1,9 +1,9 @@
-﻿namespace Sentinel.Support.Converters
-{
-    using System;
-    using System.Globalization;
-    using System.Windows.Data;
+﻿using System;
+using System.Globalization;
+using System.Windows.Data;
 
+namespace Sentinel.Support.Converters
+{
     public class ImageLibraryConverter : IValueConverter
     {
         /// <summary>

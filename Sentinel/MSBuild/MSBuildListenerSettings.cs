@@ -1,7 +1,7 @@
+using Sentinel.Interfaces.Providers;
+
 namespace Sentinel.MSBuild
 {
-    using Sentinel.Interfaces.Providers;
-
     public class MsBuildListenerSettings : IMsBuildListenerSettings
     {
         public MsBuildListenerSettings(IProviderSettings providerSettings)

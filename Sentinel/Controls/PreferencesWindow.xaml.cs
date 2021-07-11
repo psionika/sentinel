@@ -1,10 +1,10 @@
-﻿namespace Sentinel.Controls
+﻿using System;
+
+using Sentinel.Interfaces;
+using Sentinel.Services;
+
+namespace Sentinel.Controls
 {
-    using System;
-
-    using Sentinel.Interfaces;
-    using Sentinel.Services;
-
     /// <summary>
     /// Interaction logic for PreferencesWindow.xaml.
     /// </summary>

@@ -1,15 +1,15 @@
-﻿namespace Sentinel.Support.Wpf
-{
-    using System;
-    using System.Collections;
-    using System.Collections.Generic;
-    using System.Collections.ObjectModel;
-    using System.Collections.Specialized;
-    using System.ComponentModel;
-    using System.Runtime.InteropServices;
-    using System.Runtime.Serialization;
-    using Sentinel.Interfaces.CodeContracts;
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Collections.Specialized;
+using System.ComponentModel;
+using System.Runtime.InteropServices;
+using System.Runtime.Serialization;
+using Sentinel.Interfaces.CodeContracts;
 
+namespace Sentinel.Support.Wpf
+{
     [Serializable]
     public class ObservableDictionary<TKey, TValue> : IDictionary<TKey, TValue>,
                                                       IDictionary,

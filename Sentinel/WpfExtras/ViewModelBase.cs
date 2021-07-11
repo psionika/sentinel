@@ -1,10 +1,10 @@
-﻿namespace Sentinel.WpfExtras
-{
-    using System;
-    using System.ComponentModel;
-    using System.Diagnostics;
-    using log4net;
+﻿using System;
+using System.ComponentModel;
+using System.Diagnostics;
+using log4net;
 
+namespace Sentinel.WpfExtras
+{
     public abstract class ViewModelBase : INotifyPropertyChanged, IDisposable
     {
         private readonly ILog log;

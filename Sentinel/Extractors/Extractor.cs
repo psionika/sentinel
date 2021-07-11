@@ -1,15 +1,15 @@
-﻿namespace Sentinel.Extractors
+﻿using System.Diagnostics;
+using System.Globalization;
+using System.Runtime.Serialization;
+using System.Text.RegularExpressions;
+
+using Sentinel.Extractors.Interfaces;
+using Sentinel.Interfaces;
+
+using Sentinel.WpfExtras;
+
+namespace Sentinel.Extractors
 {
-    using System.Diagnostics;
-    using System.Globalization;
-    using System.Runtime.Serialization;
-    using System.Text.RegularExpressions;
-
-    using Sentinel.Extractors.Interfaces;
-    using Sentinel.Interfaces;
-
-    using WpfExtras;
-
     [DataContract]
     public class Extractor : ViewModelBase, IExtractor
     {

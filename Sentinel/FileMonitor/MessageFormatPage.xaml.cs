@@ -1,15 +1,15 @@
-﻿namespace Sentinel.FileMonitor
-{
-    using System;
-    using System.Collections.Generic;
-    using System.Collections.ObjectModel;
-    using System.ComponentModel;
-    using System.Diagnostics;
-    using System.Linq;
-    using System.Windows;
-    using System.Windows.Controls;
-    using WpfExtras;
+﻿using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Linq;
+using System.Windows;
+using System.Windows.Controls;
+using Sentinel.WpfExtras;
 
+namespace Sentinel.FileMonitor
+{
     /// <summary>
     ///   Interaction logic for MessageFormatPage.xaml.
     /// </summary>

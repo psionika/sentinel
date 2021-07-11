@@ -1,7 +1,7 @@
-﻿namespace Sentinel.StartUp
-{
-    using CommandLine;
+﻿using CommandLine;
 
+namespace Sentinel.StartUp
+{
     public interface IOptions
     {
         [Option('p', "port")]

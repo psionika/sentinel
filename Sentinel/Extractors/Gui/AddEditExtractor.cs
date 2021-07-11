@@ -1,12 +1,12 @@
-﻿namespace Sentinel.Extractors.Gui
+﻿using System.Windows;
+using System.Windows.Input;
+
+using Sentinel.Interfaces;
+
+using Sentinel.WpfExtras;
+
+namespace Sentinel.Extractors.Gui
 {
-    using System.Windows;
-    using System.Windows.Input;
-
-    using Sentinel.Interfaces;
-
-    using WpfExtras;
-
     public class AddEditExtractor : ViewModelBase
     {
         private readonly Window window;

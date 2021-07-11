@@ -1,17 +1,17 @@
-﻿namespace Sentinel.Logs.Gui
+﻿using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Linq;
+using System.Windows.Controls;
+
+using Sentinel.Services;
+using Sentinel.Views.Interfaces;
+
+using Sentinel.WpfExtras;
+
+namespace Sentinel.Logs.Gui
 {
-    using System.Collections.Generic;
-    using System.Collections.ObjectModel;
-    using System.ComponentModel;
-    using System.Diagnostics;
-    using System.Linq;
-    using System.Windows.Controls;
-
-    using Sentinel.Services;
-    using Sentinel.Views.Interfaces;
-
-    using WpfExtras;
-
     /// <summary>
     /// Interaction logic for ViewSelectionPage.xaml.
     /// </summary>

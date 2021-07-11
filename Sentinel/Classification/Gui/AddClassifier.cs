@@ -1,10 +1,10 @@
-﻿namespace Sentinel.Classification.Gui
+﻿using System.Windows;
+
+using Sentinel.Classification.Interfaces;
+using Sentinel.Services;
+
+namespace Sentinel.Classification.Gui
 {
-    using System.Windows;
-
-    using Sentinel.Classification.Interfaces;
-    using Sentinel.Services;
-
     public class AddClassifier : IAddClassifyingService
     {
         public void Add()

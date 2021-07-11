@@ -1,8 +1,8 @@
+using System.Collections.Generic;
+using System.Runtime.Serialization;
+
 namespace Sentinel.Interfaces
 {
-    using System.Collections.Generic;
-    using System.Runtime.Serialization;
-
     public interface IUserPreferences
     {
         string CurrentThemeName { get; }

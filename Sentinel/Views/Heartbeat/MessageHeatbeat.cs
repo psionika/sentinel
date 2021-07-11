@@ -1,19 +1,19 @@
-﻿namespace Sentinel.Views.Heartbeat
+﻿using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.ComponentModel;
+using System.Linq;
+using System.Windows.Controls;
+using System.Windows.Threading;
+
+using Sentinel.Interfaces;
+using Sentinel.Support.Wpf;
+using Sentinel.Views.Interfaces;
+
+using Sentinel.WpfExtras;
+
+namespace Sentinel.Views.Heartbeat
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Collections.ObjectModel;
-    using System.ComponentModel;
-    using System.Linq;
-    using System.Windows.Controls;
-    using System.Windows.Threading;
-
-    using Sentinel.Interfaces;
-    using Sentinel.Support.Wpf;
-    using Sentinel.Views.Interfaces;
-
-    using WpfExtras;
-
     public class MessageHeatBeat : ViewModelBase, ILogViewer
     {
         public static readonly string Id = "f1da010a-bd8f-4957-a16d-2f3ada1e40f6";

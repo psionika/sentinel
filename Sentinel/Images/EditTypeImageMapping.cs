@@ -1,12 +1,12 @@
+using System.Diagnostics;
+using System.Windows;
+
+using Sentinel.Images.Controls;
+using Sentinel.Images.Interfaces;
+using Sentinel.Services;
+
 namespace Sentinel.Images
 {
-    using System.Diagnostics;
-    using System.Windows;
-
-    using Sentinel.Images.Controls;
-    using Sentinel.Images.Interfaces;
-    using Sentinel.Services;
-
     public class EditTypeImageMapping : IEditTypeImage
     {
         public void Edit(ImageTypeRecord imageTypeRecord)

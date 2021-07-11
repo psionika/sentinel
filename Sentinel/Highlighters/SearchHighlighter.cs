@@ -1,15 +1,15 @@
+using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Linq;
+using System.Runtime.Serialization;
+using System.Windows.Media;
+
+using Sentinel.Highlighters.Interfaces;
+using Sentinel.Interfaces;
+
 namespace Sentinel.Highlighters
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Diagnostics;
-    using System.Linq;
-    using System.Runtime.Serialization;
-    using System.Windows.Media;
-
-    using Sentinel.Highlighters.Interfaces;
-    using Sentinel.Interfaces;
-
     [DataContract]
     public class SearchHighlighter : IDefaultInitialisation, ISearchHighlighter
     {

@@ -1,7 +1,7 @@
-﻿namespace Sentinel.FileMonitor
-{
-    using Sentinel.Interfaces.Providers;
+﻿using Sentinel.Interfaces.Providers;
 
+namespace Sentinel.FileMonitor
+{
     public interface IFileMonitoringProviderSettings : IProviderSettings
     {
         string FileName { get; }

@@ -1,19 +1,19 @@
-﻿namespace Sentinel.Filters
+﻿using System.Collections.ObjectModel;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Linq;
+using System.Runtime.Serialization;
+using System.Windows.Input;
+
+using Sentinel.Filters.Gui;
+using Sentinel.Filters.Interfaces;
+using Sentinel.Interfaces;
+using Sentinel.Services;
+
+using Sentinel.WpfExtras;
+
+namespace Sentinel.Filters
 {
-    using System.Collections.ObjectModel;
-    using System.ComponentModel;
-    using System.Diagnostics;
-    using System.Linq;
-    using System.Runtime.Serialization;
-    using System.Windows.Input;
-
-    using Sentinel.Filters.Gui;
-    using Sentinel.Filters.Interfaces;
-    using Sentinel.Interfaces;
-    using Sentinel.Services;
-
-    using WpfExtras;
-
     [DataContract]
     public class FilteringService<T> : ViewModelBase, IFilteringService<T>, IDefaultInitialisation
         where T : class, IFilter

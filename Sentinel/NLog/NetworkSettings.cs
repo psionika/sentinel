@@ -1,7 +1,7 @@
-﻿namespace Sentinel.NLog
-{
-    using System.Runtime.Serialization;
+﻿using System.Runtime.Serialization;
 
+namespace Sentinel.NLog
+{
     [DataContract]
     public class NetworkSettings : ProviderSettings, INLogAppenderSettings
     {

@@ -1,11 +1,11 @@
-﻿namespace Sentinel.WpfExtras.Converters
-{
-    using System;
-    using System.Globalization;
-    using System.Windows;
-    using System.Windows.Data;
-    using System.Windows.Media;
+﻿using System;
+using System.Globalization;
+using System.Windows;
+using System.Windows.Data;
+using System.Windows.Media;
 
+namespace Sentinel.WpfExtras.Converters
+{
     [ValueConversion(typeof(Color), typeof(Brush))]
     public class ColourConverter : IValueConverter
     {

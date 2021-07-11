@@ -1,11 +1,11 @@
-﻿namespace Sentinel.Logs.Gui
+﻿using System.Collections.ObjectModel;
+using System.ComponentModel;
+using System.Windows.Controls;
+
+using Sentinel.WpfExtras;
+
+namespace Sentinel.Logs.Gui
 {
-    using System.Collections.ObjectModel;
-    using System.ComponentModel;
-    using System.Windows.Controls;
-
-    using WpfExtras;
-
     /// <summary>
     /// Interaction logic for NewLoggerSummaryPage.xaml.
     /// </summary>

@@ -1,14 +1,14 @@
+using System;
+using System.Runtime.Serialization;
+using System.Text.RegularExpressions;
+
+using Sentinel.Filters.Interfaces;
+using Sentinel.Interfaces;
+
+using Sentinel.WpfExtras;
+
 namespace Sentinel.Filters
 {
-    using System;
-    using System.Runtime.Serialization;
-    using System.Text.RegularExpressions;
-
-    using Sentinel.Filters.Interfaces;
-    using Sentinel.Interfaces;
-
-    using WpfExtras;
-
     [DataContract]
     public class Filter : ViewModelBase, IFilter
     {

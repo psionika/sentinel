@@ -1,12 +1,12 @@
+using System;
+using System.Globalization;
+using System.Windows.Data;
+using log4net;
+using Sentinel.Highlighters.Interfaces;
+using Sentinel.Interfaces;
+
 namespace Sentinel.Highlighters
 {
-    using System;
-    using System.Globalization;
-    using System.Windows.Data;
-    using log4net;
-    using Sentinel.Highlighters.Interfaces;
-    using Sentinel.Interfaces;
-
     public class HighlighterConverter : IValueConverter
     {
         private static readonly ILog Log = LogManager.GetLogger(typeof(HighlighterConverter));

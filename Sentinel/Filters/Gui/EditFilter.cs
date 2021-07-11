@@ -1,10 +1,10 @@
+using System.Diagnostics;
+using System.Windows;
+
+using Sentinel.Filters.Interfaces;
+
 namespace Sentinel.Filters.Gui
 {
-    using System.Diagnostics;
-    using System.Windows;
-
-    using Sentinel.Filters.Interfaces;
-
     public class EditFilter : IEditFilterService
     {
         public void Edit(IFilter filter)

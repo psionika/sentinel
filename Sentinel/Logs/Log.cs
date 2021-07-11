@@ -1,17 +1,17 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Linq;
+
+using Sentinel.Classification.Interfaces;
+using Sentinel.Interfaces;
+using Sentinel.Services;
+
+using Sentinel.WpfExtras;
+
 namespace Sentinel.Logs
 {
-    using System;
-    using System.Collections.Generic;
-    using System.ComponentModel;
-    using System.Diagnostics;
-    using System.Linq;
-
-    using Sentinel.Classification.Interfaces;
-    using Sentinel.Interfaces;
-    using Sentinel.Services;
-
-    using WpfExtras;
-
     public class Log : ViewModelBase, ILogger
     {
         private readonly IClassifyingService<IClassifier> classifier;

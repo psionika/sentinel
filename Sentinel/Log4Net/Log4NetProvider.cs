@@ -1,19 +1,19 @@
-﻿namespace Sentinel.Log4Net
-{
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Net;
-    using System.Net.Sockets;
-    using System.Text;
-    using System.Threading;
-    using System.Threading.Tasks;
-    using System.Xml.Linq;
-    using log4net;
-    using Sentinel.Interfaces;
-    using Sentinel.Interfaces.CodeContracts;
-    using Sentinel.Interfaces.Providers;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Net;
+using System.Net.Sockets;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+using System.Xml.Linq;
+using log4net;
+using Sentinel.Interfaces;
+using Sentinel.Interfaces.CodeContracts;
+using Sentinel.Interfaces.Providers;
 
+namespace Sentinel.Log4Net
+{
     public class Log4NetProvider : INetworkProvider
     {
         public static readonly IProviderRegistrationRecord ProviderRegistrationInformation =

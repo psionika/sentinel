@@ -1,10 +1,10 @@
-﻿namespace Sentinel.Interfaces
-{
-    using System.Collections.Specialized;
-    using System.ComponentModel;
-    using System.Diagnostics;
-    using log4net;
+﻿using System.Collections.Specialized;
+using System.ComponentModel;
+using System.Diagnostics;
+using log4net;
 
+namespace Sentinel.Interfaces
+{
     public delegate string GetFriendlyNameDelegate<T>(T obj);
 
     public class CollectionChangeHelper<T>

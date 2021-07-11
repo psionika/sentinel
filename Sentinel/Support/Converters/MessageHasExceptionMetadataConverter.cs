@@ -1,10 +1,10 @@
+using System;
+using System.Globalization;
+using System.Windows.Data;
+using Sentinel.Interfaces;
+
 namespace Sentinel.Support.Converters
 {
-    using System;
-    using System.Globalization;
-    using System.Windows.Data;
-    using Sentinel.Interfaces;
-
     public class MessageHasExceptionMetadataConverter : IValueConverter
     {
         /// <summary>

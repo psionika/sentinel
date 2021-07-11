@@ -1,12 +1,12 @@
-﻿namespace Sentinel.EventLogMonitor
+﻿using System;
+using System.Diagnostics;
+using System.Text;
+
+using Sentinel.EventLogMonitor.Interfaces;
+using Sentinel.Interfaces.CodeContracts;
+
+namespace Sentinel.EventLogMonitor
 {
-    using System;
-    using System.Diagnostics;
-    using System.Text;
-
-    using Sentinel.EventLogMonitor.Interfaces;
-    using Sentinel.Interfaces.CodeContracts;
-
     internal class EventLogEntry : IEventLogEntry
     {
         public EventLogEntry(System.Diagnostics.EventLogEntry entry)

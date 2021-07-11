@@ -1,10 +1,10 @@
+using System;
+using System.Diagnostics;
+using System.Globalization;
+using System.Windows.Data;
+
 namespace Sentinel.Support.Converters
 {
-    using System;
-    using System.Diagnostics;
-    using System.Globalization;
-    using System.Windows.Data;
-
     public class BooleanToWidthConverter : IValueConverter
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)

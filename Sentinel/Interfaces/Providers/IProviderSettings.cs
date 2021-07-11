@@ -1,7 +1,7 @@
-﻿namespace Sentinel.Interfaces.Providers
-{
-    using System.Runtime.Serialization;
+﻿using System.Runtime.Serialization;
 
+namespace Sentinel.Interfaces.Providers
+{
     public interface IProviderSettings
     {
         [DataMember]

@@ -1,20 +1,20 @@
-﻿namespace Sentinel.Providers
+﻿using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.ComponentModel;
+using System.Linq;
+using System.Windows;
+using System.Windows.Controls;
+
+using log4net;
+
+using Sentinel.Interfaces.Providers;
+using Sentinel.Providers.Interfaces;
+using Sentinel.Services;
+
+using Sentinel.WpfExtras;
+
+namespace Sentinel.Providers
 {
-    using System.Collections.Generic;
-    using System.Collections.ObjectModel;
-    using System.ComponentModel;
-    using System.Linq;
-    using System.Windows;
-    using System.Windows.Controls;
-
-    using log4net;
-
-    using Sentinel.Interfaces.Providers;
-    using Sentinel.Providers.Interfaces;
-    using Sentinel.Services;
-
-    using WpfExtras;
-
     /// <summary>
     /// Interaction logic for SelectProviderPage.xaml.
     /// </summary>

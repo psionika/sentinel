@@ -1,17 +1,17 @@
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Linq;
+using System.Windows;
+using System.Windows.Input;
+using System.Windows.Media;
+
+using Sentinel.Interfaces;
+using Sentinel.Interfaces.CodeContracts;
+
+using Sentinel.WpfExtras;
+
 namespace Sentinel.Highlighters.Gui
 {
-    using System.Collections.Generic;
-    using System.ComponentModel;
-    using System.Linq;
-    using System.Windows;
-    using System.Windows.Input;
-    using System.Windows.Media;
-
-    using Sentinel.Interfaces;
-    using Sentinel.Interfaces.CodeContracts;
-
-    using WpfExtras;
-
     public class AddEditHighlighter : ViewModelBase
     {
         private readonly Window window;

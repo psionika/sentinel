@@ -1,11 +1,11 @@
-﻿namespace Sentinel
+﻿using System.Windows;
+
+using Sentinel.Properties;
+using Sentinel.Services;
+using Sentinel.Services.Interfaces;
+
+namespace Sentinel
 {
-    using System.Windows;
-
-    using Sentinel.Properties;
-    using Sentinel.Services;
-    using Sentinel.Services.Interfaces;
-
     /// <summary>
     /// Interaction logic for MainApplication.xaml.
     /// </summary>

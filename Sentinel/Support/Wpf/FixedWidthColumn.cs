@@ -1,8 +1,8 @@
+using System.Windows;
+using System.Windows.Controls;
+
 namespace Sentinel.Support.Wpf
 {
-    using System.Windows;
-    using System.Windows.Controls;
-
     public class FixedWidthColumn : GridViewColumn
     {
         public static readonly DependencyProperty FixedWidthProperty =

@@ -1,11 +1,11 @@
+using System;
+using System.Collections.Generic;
+using System.Globalization;
+using System.Windows.Data;
+using Sentinel.Interfaces.CodeContracts;
+
 namespace Sentinel.Support.Converters
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Globalization;
-    using System.Windows.Data;
-    using Sentinel.Interfaces.CodeContracts;
-
     public class MetaDataParameterConverter : IMultiValueConverter
     {
         public object Convert(object[] values, Type targetType, object parameter, CultureInfo culture)

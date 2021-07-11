@@ -1,9 +1,9 @@
-﻿namespace Sentinel.Images.Interfaces
-{
-    using System.Collections.ObjectModel;
-    using System.Runtime.Serialization;
-    using System.Windows.Input;
+﻿using System.Collections.ObjectModel;
+using System.Runtime.Serialization;
+using System.Windows.Input;
 
+namespace Sentinel.Images.Interfaces
+{
     public interface ITypeImageService
     {
         ICommand Add { get; }

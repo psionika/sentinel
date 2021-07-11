@@ -1,10 +1,10 @@
+using System.Windows;
+
+using Sentinel.Images.Interfaces;
+using Sentinel.Services;
+
 namespace Sentinel.Images
 {
-    using System.Windows;
-
-    using Sentinel.Images.Interfaces;
-    using Sentinel.Services;
-
     public class RemoveTypeImageMapping : IRemoveTypeImage
     {
         public void Remove(ImageTypeRecord typeImageRecord)

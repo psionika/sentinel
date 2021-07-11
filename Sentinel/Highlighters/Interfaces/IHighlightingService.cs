@@ -1,10 +1,10 @@
+using System.Collections.ObjectModel;
+using System.Windows.Input;
+
+using Sentinel.Interfaces;
+
 namespace Sentinel.Highlighters.Interfaces
 {
-    using System.Collections.ObjectModel;
-    using System.Windows.Input;
-
-    using Sentinel.Interfaces;
-
     public interface IHighlightingService<T>
         where T : IHighlighter
     {

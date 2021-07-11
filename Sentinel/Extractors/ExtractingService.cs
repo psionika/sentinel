@@ -1,19 +1,19 @@
-﻿namespace Sentinel.Extractors
+﻿using System.Collections.ObjectModel;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Linq;
+using System.Runtime.Serialization;
+using System.Windows.Input;
+
+using Sentinel.Extractors.Gui;
+using Sentinel.Extractors.Interfaces;
+using Sentinel.Interfaces;
+using Sentinel.Services;
+
+using Sentinel.WpfExtras;
+
+namespace Sentinel.Extractors
 {
-    using System.Collections.ObjectModel;
-    using System.ComponentModel;
-    using System.Diagnostics;
-    using System.Linq;
-    using System.Runtime.Serialization;
-    using System.Windows.Input;
-
-    using Sentinel.Extractors.Gui;
-    using Sentinel.Extractors.Interfaces;
-    using Sentinel.Interfaces;
-    using Sentinel.Services;
-
-    using WpfExtras;
-
     [DataContract]
     public class ExtractingService<T> : ViewModelBase, IExtractingService<T>, IDefaultInitialisation
         where T : class, IExtractor

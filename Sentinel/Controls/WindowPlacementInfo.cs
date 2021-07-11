@@ -1,8 +1,8 @@
-﻿namespace Sentinel.Controls
-{
-    using System.Runtime.Serialization;
-    using System.Windows;
+﻿using System.Runtime.Serialization;
+using System.Windows;
 
+namespace Sentinel.Controls
+{
     [DataContract]
     public class WindowPlacementInfo
     {

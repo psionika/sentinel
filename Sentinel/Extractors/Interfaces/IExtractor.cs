@@ -1,9 +1,9 @@
-﻿namespace Sentinel.Extractors.Interfaces
+﻿using System.Runtime.Serialization;
+
+using Sentinel.Interfaces;
+
+namespace Sentinel.Extractors.Interfaces
 {
-    using System.Runtime.Serialization;
-
-    using Sentinel.Interfaces;
-
     public interface IExtractor
     {
         [DataMember]

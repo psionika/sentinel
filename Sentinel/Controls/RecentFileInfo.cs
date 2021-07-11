@@ -1,8 +1,8 @@
-﻿namespace Sentinel.Controls
-{
-    using System.Collections.Generic;
-    using System.Runtime.Serialization;
+﻿using System.Collections.Generic;
+using System.Runtime.Serialization;
 
+namespace Sentinel.Controls
+{
     [DataContract]
     public class RecentFileInfo
     {

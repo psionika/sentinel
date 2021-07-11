@@ -1,7 +1,7 @@
-﻿namespace Sentinel.Filters.Gui
-{
-    using System.Windows;
+﻿using System.Windows;
 
+namespace Sentinel.Filters.Gui
+{
     /// <summary>
     /// Interaction logic for AddEditFilterWindow.xaml.
     /// </summary>

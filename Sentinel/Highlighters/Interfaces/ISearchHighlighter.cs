@@ -1,9 +1,9 @@
+using System.Collections.Generic;
+
+using Sentinel.Interfaces;
+
 namespace Sentinel.Highlighters.Interfaces
 {
-    using System.Collections.Generic;
-
-    using Sentinel.Interfaces;
-
     public interface ISearchHighlighter
     {
         IEnumerable<LogEntryFields> Fields { get; }

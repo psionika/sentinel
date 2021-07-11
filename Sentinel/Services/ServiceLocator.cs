@@ -1,18 +1,18 @@
-﻿namespace Sentinel.Services
+﻿using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Diagnostics;
+using System.Diagnostics.CodeAnalysis;
+using System.IO;
+using System.Linq;
+using System.Windows;
+
+using log4net;
+
+using Sentinel.Interfaces;
+
+namespace Sentinel.Services
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Collections.ObjectModel;
-    using System.Diagnostics;
-    using System.Diagnostics.CodeAnalysis;
-    using System.IO;
-    using System.Linq;
-    using System.Windows;
-
-    using log4net;
-
-    using Sentinel.Interfaces;
-
     public class ServiceLocator
     {
         private static readonly ILog Log = LogManager.GetLogger(typeof(ServiceLocator));

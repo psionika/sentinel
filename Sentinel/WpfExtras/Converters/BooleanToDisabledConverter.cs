@@ -1,9 +1,9 @@
-﻿namespace Sentinel.WpfExtras.Converters
-{
-    using System;
-    using System.Globalization;
-    using System.Windows.Data;
+﻿using System;
+using System.Globalization;
+using System.Windows.Data;
 
+namespace Sentinel.WpfExtras.Converters
+{
     public class BooleanToDisabledConverter : IValueConverter
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)

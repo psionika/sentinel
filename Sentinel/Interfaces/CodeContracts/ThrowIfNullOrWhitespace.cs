@@ -1,10 +1,10 @@
+using System;
+using System.Diagnostics;
+using System.Diagnostics.Contracts;
+using System.Runtime.CompilerServices;
+
 namespace Sentinel.Interfaces.CodeContracts
 {
-    using System;
-    using System.Diagnostics;
-    using System.Diagnostics.Contracts;
-    using System.Runtime.CompilerServices;
-
     public static partial class CodeContractExtensions
     {
         [ContractAbbreviator]

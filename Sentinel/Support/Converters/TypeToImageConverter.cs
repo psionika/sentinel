@@ -1,14 +1,14 @@
+using System;
+using System.Globalization;
+using System.Windows.Data;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using Sentinel.Images;
+using Sentinel.Images.Interfaces;
+using Sentinel.Services;
+
 namespace Sentinel.Support.Converters
 {
-    using System;
-    using System.Globalization;
-    using System.Windows.Data;
-    using System.Windows.Media;
-    using System.Windows.Media.Imaging;
-    using Sentinel.Images;
-    using Sentinel.Images.Interfaces;
-    using Sentinel.Services;
-
     [ValueConversion(typeof(string), typeof(ImageSource))]
     public class TypeToImageConverter : IValueConverter
     {

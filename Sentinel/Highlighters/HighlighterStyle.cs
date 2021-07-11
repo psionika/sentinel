@@ -1,14 +1,14 @@
+using System.Runtime.Serialization;
+using System.Windows.Media;
+
+using Newtonsoft.Json;
+
+using Sentinel.Interfaces;
+
+using Sentinel.WpfExtras;
+
 namespace Sentinel.Highlighters
 {
-    using System.Runtime.Serialization;
-    using System.Windows.Media;
-
-    using Newtonsoft.Json;
-
-    using Sentinel.Interfaces;
-
-    using WpfExtras;
-
     [DataContract]
     public class HighlighterStyle : ViewModelBase, IHighlighterStyle
     {

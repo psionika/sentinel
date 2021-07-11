@@ -1,10 +1,10 @@
+using System;
+using System.Globalization;
+using System.Windows;
+using System.Windows.Data;
+
 namespace Sentinel.WpfExtras.Converters
 {
-    using System;
-    using System.Globalization;
-    using System.Windows;
-    using System.Windows.Data;
-
     public class CollapseIfFalseConverter : IValueConverter
     {
         /// <summary>

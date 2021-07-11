@@ -1,13 +1,13 @@
-﻿namespace Sentinel.NLog
+﻿using System.Collections.ObjectModel;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Windows.Controls;
+
+using Sentinel.Interfaces.Providers;
+using Sentinel.WpfExtras;
+
+namespace Sentinel.NLog
 {
-    using System.Collections.ObjectModel;
-    using System.ComponentModel;
-    using System.Diagnostics;
-    using System.Windows.Controls;
-
-    using Sentinel.Interfaces.Providers;
-    using Sentinel.WpfExtras;
-
     public partial class NetworkConfigurationPage : UserControl, IWizardPage
     {
         private readonly ObservableCollection<IWizardPage> children = new ObservableCollection<IWizardPage>();

@@ -1,7 +1,7 @@
-﻿namespace Sentinel.Providers
-{
-    using Sentinel.Interfaces.Providers;
+﻿using Sentinel.Interfaces.Providers;
 
+namespace Sentinel.Providers
+{
     public class ProviderSettings : IProviderSettings
     {
         public string Name { get; set; }

@@ -1,8 +1,8 @@
+using System;
+using System.Collections.Generic;
+
 namespace Sentinel.Interfaces
 {
-    using System;
-    using System.Collections.Generic;
-
     public class CaseInsensitiveComparer<T> : IEqualityComparer<T>
     {
         public bool Equals(T x, T y)

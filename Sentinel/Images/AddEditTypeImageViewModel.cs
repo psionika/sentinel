@@ -1,16 +1,16 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.IO;
+using System.Windows;
+using System.Windows.Input;
+using System.Windows.Media.Imaging;
+using Microsoft.Win32;
+using Sentinel.Images.Interfaces;
+using Sentinel.WpfExtras;
+
 namespace Sentinel.Images
 {
-    using System;
-    using System.Collections.Generic;
-    using System.ComponentModel;
-    using System.IO;
-    using System.Windows;
-    using System.Windows.Input;
-    using System.Windows.Media.Imaging;
-    using Microsoft.Win32;
-    using Sentinel.Images.Interfaces;
-    using WpfExtras;
-
     public class AddEditTypeImageViewModel
         : ViewModelBase, IDataErrorInfo
     {
