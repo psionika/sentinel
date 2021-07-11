@@ -21,7 +21,7 @@ namespace Sentinel.Logs.Gui
     /// </summary>
     public partial class ProvidersPage : IWizardPage, IDataErrorInfo
     {
-        private static readonly ILog Log = LogManager.GetLogger(typeof(ProvidersPage));
+        private static readonly ILog Log = log4net.LogManager.GetLogger(typeof(ProvidersPage));
 
         private readonly ObservableCollection<IWizardPage> children = new ObservableCollection<IWizardPage>();
 
