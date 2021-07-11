@@ -226,9 +226,6 @@ namespace Sentinel.Highlighters
                 case LogEntryFields.Description:
                     target = logEntry.Description;
                     break;
-                ////case LogEntryField.Classification:
-                ////case LogEntryField.None:
-                ////case LogEntryField.Host:
                 default:
                     target = string.Empty;
                     break;

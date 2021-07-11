@@ -141,12 +141,6 @@ namespace Sentinel.FileMonitor
         {
             // Todo: Implement page save....
             return saveData;
-
-            //// Debug.Assert(settings != null,
-            ////             "Settings not set, did the previous page not provide this?  " +
-            ////             "Was SuggestPreviousPage not called by the caller of this class?");
-            //// settings.MessageDecoder = CustomFormat;
-            //// return settings;
         }
 
         public void AddChild(IWizardPage newItem)
