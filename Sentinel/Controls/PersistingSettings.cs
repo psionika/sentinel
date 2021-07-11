@@ -19,7 +19,7 @@ namespace Sentinel.Controls
         {
             if (string.IsNullOrWhiteSpace(fileName))
             {
-                throw new System.ArgumentException("Value cannot be null or whitespace.", nameof(fileName));
+                throw new ArgumentException("Value cannot be null or whitespace.", nameof(fileName));
             }
 
             // Note that PersistingSettings is a new file format, so need to detect whether using

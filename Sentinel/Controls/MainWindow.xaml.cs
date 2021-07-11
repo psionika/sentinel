@@ -428,7 +428,7 @@ namespace Sentinel.Controls
             }
 
             // Debug the available loggers.
-            var logManager = ServiceLocator.Instance.Get<Logs.Interfaces.ILogManager>();
+            var logManager = ServiceLocator.Instance.Get<ILogManager>();
             foreach (var logger in logManager)
             {
                 Log.DebugFormat("Log: {0}", logger.Name);

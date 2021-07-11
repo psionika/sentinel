@@ -14,10 +14,11 @@ namespace Sentinel
         /// <summary>
         /// Application Entry Point.
         /// </summary>
-        [System.STAThreadAttribute()]
+        [System.STAThread()]
         public static void Main()
         {
-            Sentinel.MainApplication app = new Sentinel.MainApplication();
+            MainApplication app = new MainApplication();
+
             app.InitializeComponent();
             app.Run();
         }

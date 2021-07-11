@@ -1,6 +1,6 @@
 ﻿namespace Sentinel.Views.Heartbeat
 {
-    public class ViewInformation : Sentinel.Views.Interfaces.IViewInformation
+    public class ViewInformation : Interfaces.IViewInformation
     {
         public ViewInformation(string identifier, string name)
         {
