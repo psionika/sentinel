@@ -238,9 +238,9 @@ namespace Sentinel.Highlighters
                 case MatchMode.CaseSensitive:
                     return target.Contains(Pattern);
                 case MatchMode.CaseInsensitive:
-                    return target.ToLower().Contains(Pattern.ToLower());
+                    return target.IndexOf(Pattern, System.StringComparison.OrdinalIgnoreCase) >= 0;
                 case MatchMode.RegularExpression:
-                    return regex != null && regex.IsMatch(target);
+                    return regex?.IsMatch(target) == true;
             }
 
             return false;

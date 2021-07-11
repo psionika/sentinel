@@ -119,6 +119,7 @@
                         </Controls:FixedWidthColumn.CellTemplate>
                     </Controls:FixedWidthColumn>
                     <GridViewColumn Header="Description"
+                                    Width="Auto"
                                     DisplayMemberBinding="{Binding Description}" />
                     <GridViewColumn Header="Source File"
                                     Width="{Binding Preferences.ShowSourceInformationColumns, RelativeSource={RelativeSource AncestorType={x:Type Windows:MainWindow}, Mode=FindAncestor}, Converter={StaticResource BooleanToWidthConverter}, ConverterParameter=130}"
