@@ -14,6 +14,7 @@
     <UserControl.Resources>
         <Converters:TypeToSmallImageConverter x:Key="TypeToImageConverter" />
         <Converters:BooleanToWidthConverter x:Key="BooleanToWidthConverter" />
+        <Converters:WidthAutoConverter x:Key="WidthAutoConverter"/>
         <Converters:MessageHasExceptionMetadataConverter x:Key="MessageHasExceptionMetadata" />
         <Converters:MetaDataConverter x:Key="MetaDataConverter" />
         <Converters:MetaDataParameterConverter x:Key="MetaDataParameterConverter" />
@@ -31,13 +32,6 @@
                   Grid.Column="0"
                   ScrollViewer.CanContentScroll="True"
                   ItemsSource="{Binding Messages}">
-            <ListView.ItemContainerStyle>
-                <Style TargetType="ListViewItem">
-                    <Setter Property="HorizontalContentAlignment" Value="Stretch" />
-
-                    <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Disabled"/>
-                </Style>
-            </ListView.ItemContainerStyle>
             <ListView.ContextMenu>
                 <ContextMenu>
                     <MenuItem Header="Copy row to clipboard" Click="ContextMenuCopyRowToClipboard_Click"/>
@@ -91,8 +85,8 @@
                             </DataTemplate>
                         </Controls:FixedWidthColumn.CellTemplate>
                     </Controls:FixedWidthColumn>
-                    <GridViewColumn Header="Date" x:Name="DateColumn"/>
-                    <GridViewColumn Header="Time" x:Name="TimeColumn"/>
+                    <GridViewColumn Header="Date" Width="80" x:Name="DateColumn"/>
+                    <GridViewColumn Header="Time" Width="120" x:Name="TimeColumn"/>
                     <Controls:FixedWidthColumn Header="Thread"
                                                FixedWidth="{Binding Preferences.ShowThreadColumn, RelativeSource={RelativeSource AncestorType={x:Type Windows:MainWindow}, Mode=FindAncestor}, Converter={StaticResource BooleanToWidthConverter}, ConverterParameter=50}"
                                                DisplayMemberBinding="{Binding Thread}" />
@@ -100,6 +94,7 @@
                                     Width="{Binding Preferences.ShowSourceColumn, RelativeSource={RelativeSource AncestorType={x:Type Windows:MainWindow}, Mode=FindAncestor}, Converter={StaticResource BooleanToWidthConverter}, ConverterParameter=100}"
                                     DisplayMemberBinding="{Binding MetaData, Converter={StaticResource MetaDataConverter}, ConverterParameter='Host'}" />
                     <GridViewColumn Header="System"
+                                    Width="250"
                                     DisplayMemberBinding="{Binding System}" />
                     <Controls:FixedWidthColumn FixedWidth="{Binding Preferences.ShowExceptionColumn, RelativeSource={RelativeSource AncestorType={x:Type Windows:MainWindow}, Mode=FindAncestor}, Converter={StaticResource BooleanToWidthConverter}, ConverterParameter=30}">
                         <Controls:FixedWidthColumn.Header>
@@ -132,7 +127,7 @@
                         </Controls:FixedWidthColumn.CellTemplate>
                     </Controls:FixedWidthColumn>
                     <GridViewColumn Header="Description"
-                                    Width="Auto"
+                                    Width="{Binding ElementName=messages, Path=ActualWidth, Converter={StaticResource WidthAutoConverter}, ConverterParameter=100}"
                                     DisplayMemberBinding="{Binding Description}" />
                     <GridViewColumn Header="Source File"
                                     Width="{Binding Preferences.ShowSourceInformationColumns, RelativeSource={RelativeSource AncestorType={x:Type Windows:MainWindow}, Mode=FindAncestor}, Converter={StaticResource BooleanToWidthConverter}, ConverterParameter=130}"

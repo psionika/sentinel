@@ -315,6 +315,7 @@
     <Compile Include="Support\Converters\TypeToLargeImageConverter.cs" />
     <Compile Include="Support\Converters\TypeToMediumImageConverter.cs" />
     <Compile Include="Support\Converters\TypeToSmallImageConverter.cs" />
+    <Compile Include="Support\Converters\WidthAutoConverter.cs" />
     <Compile Include="Support\GridViewSort.cs" />
     <Compile Include="Support\JsonHelper.cs" />
     <Compile Include="Support\ScrollingHelper.cs" />

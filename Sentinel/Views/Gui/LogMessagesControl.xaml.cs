@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel;
+using System.Globalization;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Windows;
@@ -283,4 +284,6 @@ namespace Sentinel.Views.Gui
             }
         }
     }
+
+
 }
